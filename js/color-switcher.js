@@ -7,85 +7,69 @@
 
 
 
-(function() {
-    "use strict";
+document.querySelector(".switcher-toggle").addEventListener("click", function() {
+    // Cuando se hace clic en el elemento con la clase "switcher-toggle"
+    var leftSwitcher = document.querySelector("#styles-switcher.left");
+    var rightSwitcher = document.querySelector("#styles-switcher.right");
+    // Selecciona los elementos con los ID "styles-switcher.left" y "styles-switcher.right"
 
-    // Función para animar una propiedad CSS de un elemento a un valor específico durante un tiempo determinado
-    function animateElement(element, property, value, duration, callback) {
-        var start = new Date().getTime(); // Tiempo inicial de la animación
-        var initialValue = parseInt(getComputedStyle(element)[property], 10); // Valor inicial de la propiedad CSS
-        var delta = value - initialValue; // Diferencia entre el valor final y el inicial
-
-        function step() {
-            var progress = Math.min((new Date().getTime() - start) / duration, 1); // Progreso de la animación (entre 0 y 1)
-            element.style[property] = (initialValue + delta * progress) + "px"; // Calcula el valor interpolado en base al progreso
-
-            if (progress < 1) {
-                requestAnimationFrame(step); // Si la animación no ha terminado, solicita el siguiente cuadro de animación
-            } else if (callback) {
-                callback(); // Si se proporciona una función de devolución de llamada, se invoca una vez que la animación ha terminado
-            }
-        }
-
-        requestAnimationFrame(step); // Inicia la animación solicitando el primer cuadro de animación
+    if (rightSwitcher.style.right === "-202px") {
+        // Si la propiedad "right" del estilo de rightSwitcher es igual a "-202px"
+        rightSwitcher.style.right = "0px";
+        // Establece la propiedad "right" del estilo de rightSwitcher en "0px"
+        rightSwitcher.classList.add("shadow");
+        // Agrega la clase "shadow" a rightSwitcher
+    } else {
+        rightSwitcher.style.right = "-202px";
+        // De lo contrario, establece la propiedad "right" del estilo de rightSwitcher en "-202px"
+        rightSwitcher.classList.remove("shadow");
+        // Elimina la clase "shadow" de rightSwitcher
     }
 
-    var switcherToggle = document.querySelector(".switcher-toggle"); // Obtiene el elemento con la clase "switcher-toggle"
-    switcherToggle.addEventListener("click", function() {
-        var stylesSwitcherLeft = document.getElementById("styles-switcher").querySelector(".left"); // Obtiene el elemento con el ID "styles-switcher" y clase "left"
-        var stylesSwitcherRight = document.getElementById("styles-switcher").querySelector(".right"); // Obtiene el elemento con el ID "styles-switcher" y clase "right"
+    if (leftSwitcher.style.left === "-202px") {
+        // Si la propiedad "left" del estilo de leftSwitcher es igual a "-202px"
+        leftSwitcher.style.left = "0px";
+        // Establece la propiedad "left" del estilo de leftSwitcher en "0px"
+        leftSwitcher.classList.add("shadow");
+        // Agrega la clase "shadow" a leftSwitcher
+    } else {
+        leftSwitcher.style.left = "-202px";
+        // De lo contrario, establece la propiedad "left" del estilo de leftSwitcher en "-202px"
+        leftSwitcher.classList.remove("shadow");
+        // Elimina la clase "shadow" de leftSwitcher
+    }
+});
 
-        if (getComputedStyle(stylesSwitcherRight).right === "-202px") {
-            // Si la propiedad CSS "right" del elemento stylesSwitcherRight es igual a "-202px"
-            animateElement(stylesSwitcherRight, "right", 0, 300, function() {
-                // Anima el elemento stylesSwitcherRight para mostrarlo
-                stylesSwitcherRight.classList.add("shadow"); // Agrega la clase "shadow" al elemento stylesSwitcherRight
-            });
-        } else {
-            animateElement(stylesSwitcherRight, "right", -202, 300, function() {
-                // Anima el elemento stylesSwitcherRight para ocultarlo
-                stylesSwitcherRight.classList.remove("shadow"); // Quita la clase "shadow" al elemento stylesSwitcherRight
-            });
-        }
+var liItems = document.querySelectorAll("#styles-switcher ul li");
+// Selecciona todos los elementos <li> dentro de #styles-switcher ul y los guarda en liItems
+liItems.forEach(function(li) {
+    // Por cada elemento <li> en liItems
+    li.addEventListener("click", function() {
+        // Cuando se hace clic en el elemento <li>
+        var path = this.getAttribute("data-path");
+        // Obtiene el valor del atributo "data-path" del elemento <li> actual y lo guarda en path
+        document.querySelector("#color-switcher").setAttribute("href", path);
+        // Establece el atributo "href" del elemento con el ID "color-switcher" con el valor de path
 
-        if (getComputedStyle(stylesSwitcherLeft).left === "-202px") {
-            // Si la propiedad CSS "left" del elemento stylesSwitcherLeft es igual a "-202px"
-            animateElement(stylesSwitcherLeft, "left", 0, 300, function() {
-                // Anima el elemento stylesSwitcherLeft para mostrarlo
-                stylesSwitcherLeft.classList.add("shadow"); // Agrega la clase "shadow" al elemento stylesSwitcherLeft
-            });
-        } else {
-            animateElement(stylesSwitcherLeft, "left", -202, 300, function() {
-                // Anima el elemento stylesSwitcherLeft para ocultarlo
-                stylesSwitcherLeft.classList.remove("shadow"); // Quita la clase "shadow" al elemento stylesSwitcherLeft
-            });
-        }
-    });
-
-    var colorSwitcherItems = document.querySelectorAll("#styles-switcher ul li"); // Obtiene todos los elementos li dentro de #styles-switcher ul
-    colorSwitcherItems.forEach(function(item) {
-        item.addEventListener("click", function() {
-            // Agrega un controlador de eventos de clic a cada elemento de cambio de color
-            var path = this.getAttribute("data-path"); // Obtiene el atributo "data-path" del elemento actual
-            document.querySelector("#color-switcher").setAttribute("href", path);
-            // Establece el atributo "href" del elemento #color-switcher con el valor del atributo "data-path"
-
-            colorSwitcherItems.forEach(function(item) {
-                item.classList.remove("active"); // Quita la clase "active" de todos los elementos de cambio de color
-            });
-
-            this.classList.add("active"); // Agrega la clase "active" al elemento de cambio de color actual
+        liItems.forEach(function(item) {
+            // Por cada elemento <li> en liItems
+            item.classList.remove("active");
+            // Elimina la clase "active" del elemento <li>
         });
-    });
 
-    var resetColor = document.querySelector("#reset-color"); // Obtiene el elemento con el ID "reset-color"
-    resetColor.addEventListener("click", function() {
-        // Agrega un controlador de eventos de clic al botón de restablecimiento de color
-        document.querySelector("#color-switcher").removeAttribute("href");
-        // Elimina el atributo "href" del elemento #color-switcher para restablecer el color
-
-        colorSwitcherItems.forEach(function(item) {
-            item.classList.remove("active"); // Quita la clase "active" de todos los elementos de cambio de color
-        });
+        this.classList.add("active");
+        // Agrega la clase "active" al elemento <li> actual
     });
-})();
+});
+
+document.querySelector("#reset-color").addEventListener("click", function() {
+    // Cuando se hace clic en el elemento con el ID "reset-color"
+    document.querySelector("#color-switcher").removeAttribute("href");
+    // Elimina el atributo "href" del elemento con el ID "color-switcher"
+
+    liItems.forEach(function(item) {
+        // Por cada elemento <li> en liItems
+        item.classList.remove("active");
+        // Elimina la clase "active" del elemento <li>
+    });
+});

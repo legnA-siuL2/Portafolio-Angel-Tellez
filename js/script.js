@@ -1,16 +1,47 @@
-/*
+/* Made By
 ================================================================
-* Template:  	 Portfolio-Angel Tellez Template
+* Template:  	 Portafolio-Angel Tellez
 * Written by: 	 Luis Angel Tellez Rojas
 * Description:   Main Custom Script File
 ================================================================
 */
+/* Tabla de contenido
+=================================================
+-Tabla de contenido.
+=================================================
+	1. Preloader
+        1.1 Preloader
+        1.2 Hide Preloader
+    2. Typed   
+	3. Scroll
+	4. Mobile menu
+	5. Carousel
+	6. Counter
+    7. Isotope Portfolio Filter
+	8. Tooltips
+    9. Scroll to top
+    10.Contact Form
+=======================================================*/
+/* Detalle secciones
+1. Preloader: Esta sección contiene código para crear un efecto de animación de carga al abrir el sitio web. Utiliza las clases 'lds-ellipsis' y 'preloader' para mostrar y ocultar el preloader con una animación de desvanecimiento.
+2. Typed: Se utiliza para generar el efecto de borrar y escribir frases iniciales en la sección Home. Usa la biblioteca "Typed.js" para este propósito.
+3. Sections Scroll: Este bloque de código permite generar un efecto de desplazamiento suave al hacer clic en los enlaces internos. Utiliza la función "scrollToOffset" para realizar el desplazamiento suave.
+4. Mobile Menu: Configura el menú para dispositivos móviles, de modo que el menú se muestre como una barra principal en la parte superior.
+5. Carousel (Owl Carousel): Se utiliza la biblioteca "Owl Carousel" para dar efecto de carrusel a las referencias y a los modales del portafolio.
+6. Counter: Importa la biblioteca "jQuery" para hacer el efecto de conteo en la sección Home de las estadísticas.
+7. Isotope Portfolio Filter: Implementa un filtro personalizado para la sección de Portafolio. Permite filtrar las opciones de la cartera según las categorías seleccionadas.
+8. Tooltips: Implementa la funcionalidad para crear el efecto de tooltip en ciertos elementos.
+9. Scroll to top: Crea un botón interactivo en la esquina inferior derecha para volver al inicio de la página cuando se desplaza fuera de esta sección.
+10. Contact Form: Se encarga del envío del formulario de contacto mediante AJAX, usando la biblioteca "jQuery". Muestra un mensaje de éxito o error según el resultado del envío.
+*/
 
-//Activa el modo estricto de JavaScript en el ámbito de la función. El modo estricto es una característica de JavaScript que impone restricciones adicionales y proporciona un conjunto más sólido de reglas para el lenguaje
-(function ($) {
+(function ($) {                      //Activa el modo estricto de JavaScript en el ámbito de la función. El modo estricto es una característica de JavaScript que impone restricciones adicionales y proporciona un conjunto más sólido de reglas para el lenguaje
 	"use strict";
 
-// Preloader
+/*---------------------------------
+    1.1 Preloader                    // (animación de carga al abrir el sitio web)
+----------------------------------- */
+
 window.addEventListener('load', function() {
     var ellipsisElements = document.querySelectorAll('.lds-ellipsis');
     ellipsisElements.forEach(function(element) {
@@ -26,6 +57,9 @@ window.addEventListener('load', function() {
         document.body.style.overflow = 'auto'; // Permite el desplazamiento del cuerpo del documento después de ocultar el preloader
     }, 666);
 });
+/*---------------------------------
+    1.2 Ocultar Preloader            // (Oculta la animación de carga cuando se completa)
+----------------------------------- */
 
 function fadeOutElement(element) {
     var opacity = 1;
@@ -41,7 +75,24 @@ function fadeOutElement(element) {
 }
 
 
-// Sections Scroll
+/*----------------------------------
+    2. Typed                          // (para generar el efecto de borrar y escribir las frases iniciales en la sección Home)
+------------------------------------ */
+
+$(".typed").each(function() {
+    var typed = new Typed('.typed', {
+        stringsElement: '.typed-strings', // Elemento que contiene las cadenas de texto para mostrar
+        loop: true, // Habilita la animación en bucle
+        typeSpeed: 100, // Velocidad de escritura de cada carácter
+        backSpeed: 50, // Velocidad de borrado de cada carácter
+        backDelay: 1500, // Retraso después de que se complete la escritura antes de comenzar el borrado
+    });
+});
+
+
+/*---------------------------------
+    3. Sections Scroll               // (para generar un efecto mas agradable visualmente al desplazarse y que no sea de golpe)
+----------------------------------- */
 
 var smoothScrollElements = document.getElementsByClassName("smooth-scroll"); // Obtiene todos los elementos con la clase "smooth-scroll" y los almacena en la variable "smoothScrollElements"
 var body = document.body; // Obtiene el elemento <body> y lo almacena en la variable "body"
@@ -90,14 +141,14 @@ function easeInOutExpo(t, b, c, d) { // Define la función "easeInOutExpo" que c
     return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b; // Calcula la interpolación cuando el tiempo es mayor a la mitad de la duración
 }
 
-
-// Mobile Menu
+/*---------------------------------
+    4. Mobile Menu                   // (configura el menú para dispositivos mobiles, de forma que el menú no se muestre a la izquierda, si no como una barra principal en la parte de arriba)
+----------------------------------- */
 
 var navbarToggler = document.querySelector('.navbar-toggler'); // Selecciona el elemento con la clase "navbar-toggler" y lo almacena en la variable "navbarToggler"
 navbarToggler.addEventListener('click', function() { // Agrega un controlador de eventos para el evento "click" al elemento "navbarToggler"
     this.classList.toggle('show'); // Alterna la clase "show" en el elemento actual (agrega si no está presente, y elimina si está presente)
 });
-
 var navbarNavLinks = document.querySelectorAll('.navbar-nav a'); // Selecciona todos los elementos con la etiqueta "a" dentro de ".navbar-nav" y los almacena en la variable "navbarNavLinks"
 navbarNavLinks.forEach(function(link) { // Itera sobre cada enlace
     link.addEventListener('click', function() { // Agrega un controlador de eventos para el evento "click" a cada enlace
@@ -105,7 +156,6 @@ navbarNavLinks.forEach(function(link) { // Itera sobre cada enlace
         navbarToggler.classList.remove('show'); // Elimina la clase "show" del elemento "navbarToggler"
     });
 });
-
 var navbarCollapses = document.querySelectorAll('.navbar-side-open .collapse, .navbar-overlay .collapse'); // Selecciona los elementos con las clases "collapse" dentro de ".navbar-side-open" y ".navbar-overlay" y los almacena en la variable "navbarCollapses"
 navbarCollapses.forEach(function(collapse) { // Itera sobre cada colapso
     collapse.addEventListener('show.bs.collapse', function(e) { // Agrega un controlador de eventos para el evento "show.bs.collapse" a cada colapso
@@ -115,7 +165,6 @@ navbarCollapses.forEach(function(collapse) { // Itera sobre cada colapso
         e.preventDefault(); // Evita el comportamiento predeterminado del evento
     });
 });
-
 var navbarCollapseTogglers = document.querySelectorAll('.navbar-side-open [data-bs-toggle="collapse"], .navbar-overlay [data-bs-toggle="collapse"]'); // Selecciona los elementos con el atributo "data-bs-toggle" igual a "collapse" dentro de ".navbar-side-open" y ".navbar-overlay" y los almacena en la variable "navbarCollapseTogglers"
 navbarCollapseTogglers.forEach(function(toggler) { // Itera sobre cada botón de alternancia de colapso
     toggler.addEventListener('click', function(e) { // Agrega un controlador de eventos para el evento "click" a cada botón de alternancia de colapso
@@ -126,114 +175,73 @@ navbarCollapseTogglers.forEach(function(toggler) { // Itera sobre cada botón de
 });
 
 /*---------------------------------
-   Carousel (Owl Carousel)
+    5. Carousel (Owl Carousel)       // (importado desde la libreria Owl Carousel, para dar el efecto de carrusel a las referencias y de los modal del portafolio)
 ----------------------------------- */
 
-document.addEventListener("DOMContentLoaded", function() {
-    var owlCarousels = document.querySelectorAll(".owl-carousel");
-    owlCarousels.forEach(function(carousel) {
-      var options = {
-        rtl: false, // Establece la dirección RTL si es necesario
-        loop: true, // Habilita o deshabilita el bucle infinito
-        margin: parseInt(carousel.dataset.margin), // Establece el margen entre las diapositivas
+$(document).ready(function() {
+    $(".modal-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
         responsive: {
-          0: { items: parseInt(carousel.dataset.itemsXs) }, // Número de elementos visibles en pantallas extra pequeñas
-          576: { items: parseInt(carousel.dataset.itemsSm) }, // Número de elementos visibles en pantallas pequeñas
-          768: { items: parseInt(carousel.dataset.itemsMd) }, // Número de elementos visibles en pantallas medianas
-          992: { items: parseInt(carousel.dataset.itemsLg) } // Número de elementos visibles en pantallas grandes
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
         }
-      };
-      $(carousel).owlCarousel(options);
     });
-  });
-  
 
-
-/*------------------------------------
-    Magnific Popup
--------------------------------------- */
-// Image on Modal
-$('.popup-img-gallery').each(function() {
-    $(this).magnificPopup({
-        delegate: '.popup-img:visible', // Delega el evento a los elementos con la clase 'popup-img' que están visibles dentro del contenedor actual
-        type: "image", // Define el tipo de contenido como imagen
-        tLoading: '<div class="preloader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>', // HTML del elemento de carga
-        closeOnContentClick: !0, // Habilita el cierre del popup al hacer clic en el contenido
-        mainClass: "mfp-fade", // Clase CSS para la animación de entrada y salida
-        gallery: {
-            enabled: true, // Habilita la funcionalidad de galería
-            navigateByImgClick: true, // Permite navegar entre las imágenes al hacer clic en ellas
-            preload: [0, 1] // Cantidad de imágenes adyacentes para precargar
-        },
-    });
-});
-
-// Ajax On Modal 
-$('.popup-ajax-gallery').each(function() {
-    $(this).magnificPopup({
-        delegate: '.popup-ajax:visible', // Delega el evento a los elementos con la clase 'popup-ajax' que están visibles dentro del contenedor actual
-        type: "ajax", // Define el tipo de contenido como ajax
-        tLoading: '<div class="preloader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>', // HTML del elemento de carga
-        mainClass: "mfp-fade", // Clase CSS para la animación de entrada y salida
-        closeBtnInside: true, // Habilita el botón de cierre dentro del contenido
-        midClick: true, // Habilita el cierre del popup al hacer clic en el área media
-        gallery: {
-            enabled: true // Habilita la funcionalidad de galería
-        },
-        callbacks: {
-            ajaxContentAdded: function() {
-                $(".owl-carousel").each(function (index) {
-                    var a = $(this);
-                    if ($("html").attr("dir") == 'rtl') {
-                        var rtlVal = true; // Valor booleano para la dirección de derecha a izquierda
-                    } else {
-                        var rtlVal = false; // Valor booleano para la dirección de izquierda a derecha
-                    }
-                    $(this).owlCarousel({
-                        rtl: rtlVal, // Configura la dirección de desplazamiento del carrusel
-                        autoplay: a.data('autoplay'), // Habilita la reproducción automática del carrusel
-                        center: a.data('center'), // Habilita la alineación centrada de los elementos del carrusel
-                        autoplayTimeout: a.data('autoplaytimeout'), // Tiempo de espera entre diapositivas en la reproducción automática
-                        autoplayHoverPause: a.data('autoplayhoverpause'), // Pausa la reproducción automática al pasar el cursor sobre el carrusel
-                        loop: a.data('loop'), // Habilita el bucle infinito del carrusel
-                        speed: a.data('speed'), // Velocidad de desplazamiento del carrusel
-                        nav: a.data('nav'), // Habilita los botones de navegación del carrusel
-                        dots: a.data('dots'), // Habilita los indicadores de puntos del carrusel
-                        autoHeight: a.data('autoheight'), // Ajusta automáticamente la altura de los elementos del carrusel
-                        autoWidth: a.data('autowidth'), // Ajusta automáticamente el ancho de los elementos del carrusel
-                        margin: a.data('margin'), // Espacio entre los elementos del carrusel
-                        stagePadding: a.data('stagepadding'), // Espacio agregado alrededor de los elementos del carrusel
-                        slideBy: a.data('slideby'), // Número de elementos que se desplazan en cada transición
-                        lazyLoad: a.data('lazyload'), // Carga diferida de las imágenes del carrusel
-                        navText:['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'], // Texto de los botones de navegación
-                        animateOut: a.data('animateOut'), // Animación de salida al cambiar de diapositiva
-                        animateIn: a.data('animateIn'), // Animación de entrada al cambiar de diapositiva
-                        video: a.data('video'), // Habilita la reproducción de videos en el carrusel
-                        items: a.data('items'), // Número de elementos visibles en el carrusel
-                        responsive:{
-                            0:{items: a.data('items-xs')}, // Número de elementos visibles en dispositivos extra pequeños
-                            576:{items: a.data('items-sm')}, // Número de elementos visibles en dispositivos pequeños
-                            768:{items: a.data('items-md')}, // Número de elementos visibles en dispositivos medianos
-                            992:{items: a.data('items-lg')} // Número de elementos visibles en dispositivos grandes
-                        }
-                    });
-                });
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
             }
         }
     });
 });
 
-// YouTube/Viemo Video & Gmaps
-$('.popup-youtube, .popup-vimeo, .popup-gmaps').each(function() {
-    $(this).magnificPopup({
-        type: 'iframe', // Define el tipo de contenido como iframe
-        mainClass: 'mfp-fade', // Clase CSS para la animación de entrada y salida
+/*---------------------------------
+    6. Counter                       // (Importado desde Jquery, sirve para hacer el efecto de conteo en la sección Home de las estadisticas)
+----------------------------------- */
+
+$(window).scroll(function() {
+    $(".counter").each(function() {
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var targetValue = parseInt($(this).attr('data-to')); // Obtener el valor objetivo del atributo data-to
+
+        if (scroll > position - windowHeight) {
+            $(this).countTo({
+                from: 0, // Comenzar desde 0
+                to: targetValue, // Utilizar el valor objetivo
+                speed: 600,
+                onComplete: function() {
+                    $(this).text(targetValue); // Establecer el valor actual en la etiqueta <span>
+                }
+            });
+        }
     });
 });
 
-/*------------------------------------
-    Isotope Portfolio Filter
--------------------------------------- */
+/*---------------------------------
+    7. Isotope Portfolio Filter      // (Filtro personalizado para la sección Portafolio por las opciones.)
+----------------------------------- */
+
 $(window).on('load', function () {
     $(".portfolio-filter").each(function() {
         var e = $(this);
@@ -258,49 +266,19 @@ $(window).on('load', function () {
     });
 });
 
-/*------------------------------------
-    Counter
--------------------------------------- */
-$(".counter").each(function () {
-    $(this).appear(function () {
-        $(this).countTo({
-            speed: 1800, // Velocidad de animación para contar hasta el número
-        });
-    });
-});
+/*---------------------------------
+    8.  Tooltips                     // (Funcionalidad que creal el efecto tooltip. para que se despliegue un cuadro cuando se pasa el cursor por arriba de ciertos elementos.)
+----------------------------------- */
 
-/*------------------------------------
-    Typed
--------------------------------------- */
-$(".typed").each(function() {
-    var typed = new Typed('.typed', {
-        stringsElement: '.typed-strings', // Elemento que contiene las cadenas de texto para mostrar
-        loop: true, // Habilita la animación en bucle
-        typeSpeed: 100, // Velocidad de escritura de cada carácter
-        backSpeed: 50, // Velocidad de borrado de cada carácter
-        backDelay: 1500, // Retraso después de que se complete la escritura antes de comenzar el borrado
-    });
-});
-
-/*------------------------------------
-    YTPlayer YouTube Background
--------------------------------------- */
-
-$(".player").each(function () {
-    $(this).mb_YTPlayer(); // Inicializa el reproductor de video de YouTube en el elemento actual
-});
-
-/*------------------------
-   tooltips
--------------------------- */
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')) // Selecciona todos los elementos con el atributo 'data-bs-toggle="tooltip"' y los guarda en la variable 'tooltipTriggerList'
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) { // Itera sobre cada elemento de 'tooltipTriggerList' y crea un objeto 'Tooltip' para cada uno
   return new bootstrap.Tooltip(tooltipTriggerEl) // Crea un objeto 'Tooltip' para el elemento actual y lo guarda en la variable 'tooltipList'
 })
 
-/*------------------------
-   Scroll to top
--------------------------- */
+/*--------------------------------
+    9.  Scroll to top               // (Crea la funcionalidad para el boton interactivo en la esquina inferior derecha para volver al inicio de la pagina cuando se desplaza fuera de esta seccion)
+---------------------------------- */
+
 $(function () {
 	$(window).on('scroll', function(){ // Se activa cuando se hace scroll en la ventana
 		if ($(this).scrollTop() > 400) { // Comprueba si la posición de desplazamiento vertical es mayor a 400 píxeles desde la parte superior
@@ -315,88 +293,46 @@ $(function () {
 	});
 });
 
-/*------------------------
-   Contact Form
--------------------------- */
-var form = $('#contact-form'); // Formulario de contacto
-var submit = $('#submit-btn'); // Botón de envío
+/*--------------------------------
+    10. Contact Form                // (Creamos funcionalidad para el envío del formulario por medio de la API Formsubmit, y efectos al boton de envío)
+---------------------------------- */
 
-// Evento de envío del formulario
-form.on('submit', function (e) {
-	e.preventDefault(); // Evita el envío predeterminado del formulario
+$(document).ready(function() {
+    const contactForm = $('#contact-form'); // Capturamos el formulario
+    const submitButton = $('#submit-btn');// Capturamos el botón de envío
 
-	if (typeof $('#google-recaptcha-v3').val() != "undefined") { // Comprueba si existe un campo con el ID 'google-recaptcha-v3'
-		grecaptcha.ready(function () {
-			var site_key = $('#google-recaptcha-v3').attr('src').split("render=")[1]; // Obtiene la clave del sitio del atributo 'src' del campo
-			grecaptcha.execute(site_key, {action: 'contact'}).then(function (token) {
-				var gdata = form.serialize() + '&g-recaptcha-response=' + token; // Serializa los datos del formulario y agrega el token de reCaptcha
-				$.ajax({
-					url: 'php/mail.php',  // URL de acción del formulario
-					type: 'POST', 		  // Método de envío del formulario (get/post)
-					dataType: 'json', 	  // Tipo de datos de la solicitud (html/json/xml)
-					data: gdata, 		  // Datos del formulario serializados
-					beforeSend: function () {
-						submit.attr("disabled", "disabled"); // Deshabilita el botón de envío
-						var loadingText = '<span role="status" aria-hidden="true" class="spinner-border spinner-border-sm align-self-center me-2"></span>Sending.....'; // Cambia el texto del botón de envío
-						if (submit.html() !== loadingText) {
-							submit.data('original-text', submit.html());
-							submit.html(loadingText);
-						}
-					},
-					success: function (data) {
-						submit.before(data.Message).fadeIn("slow"); // Muestra los datos de respuesta
-						submit.html(submit.data('original-text')); // Restaura el texto original del botón de envío
-						submit.removeAttr("disabled", "disabled"); // Habilita el botón de envío
-						if (data.response == 'success') {
-							form.trigger('reset'); // Reinicia el formulario
-						}
-						setTimeout(function () {
-							$('.alert-dismissible').fadeOut('slow', function(){
-								$(this).remove();
-							});
-						}, 3000); // Desvanece el mensaje de alerta después de 3 segundos
-					},
-					error: function (e) {
-						console.log(e); // Muestra el error en la consola
-					}
-				});
-			});
-		});
-	} else {
-		$.ajax({
-			url: 'php/mail.php', // URL de acción del formulario
-			type: 'POST', // Método de envío del formulario (get/post)
-			dataType: 'json', // Tipo de datos de la solicitud (html/json/xml)
-			data: form.serialize(), // Datos del formulario serializados
-			beforeSend: function () {
-				submit.attr("disabled", "disabled"); // Deshabilita el botón de envío
-				var loadingText = '<span role="status" aria-hidden="true" class="spinner-border spinner-border-sm align-self-center me-2"></span>Sending.....'; // Cambia el texto del botón de envío
-				if (submit.html() !== loadingText) {
-					submit.data('original-text', submit.html());
-					submit.html(loadingText);
-				}
-			},
-			success: function (data) {
-				submit.before(data.Message).fadeIn("slow"); // Muestra los datos de respuesta
-				submit.html(submit.data('original-text')); // Restaura el texto original del botón de envío
-				submit.removeAttr("disabled", "disabled"); // Habilita el botón de envío
-				if (data.response == 'success') {
-					form.trigger('reset'); // Reinicia el formulario
-				}
-				setTimeout(function () {
-					$('.alert-dismissible').fadeOut('slow', function(){
-						$(this).remove();
-					});
-				}, 3500); // Desvanece el mensaje de alerta después de 3.5 segundos
-				if (typeof $('#recaptcha-v2').val() != "undefined") {
-					grecaptcha.reset(); // Reinicia reCaptcha
-				}
-			},
-			error: function (e) {
-				console.log(e); // Muestra el error en la consola
-			}
-		});
-	}
+    contactForm.on('submit', function(e) {  // quitamos el evento por defecto de envío para que no lo envíe directo, antes de nuestra funcion
+        e.preventDefault();
+
+    submitButton.html('<span role="status" aria-hidden="true" class="spinner-border spinner-border-sm align-self-center me-2"></span>Enviando mensaje...');   // Mostramos el botón con el spinner mientras se envía el mensaje
+
+    submitButton.prop('disabled', true); // Deshabilitamos el botón para evitar envíos múltiples mientras se procesa la solicitud
+
+// Envío del formulario mediante AJAX
+    $.ajax({
+        type: 'POST',
+        url: contactForm.attr('action'),
+        data: contactForm.serialize(),
+        success: function(response) {
+
+// Envío exitoso
+        console.log('Respuesta del servidor:', response);
+          submitButton.html('Enviar mensaje'); // Restauramos el texto original del botón
+          submitButton.prop('disabled', false); // Habilitamos el botón nuevamente
+          contactForm[0].reset(); // Reiniciamos el formulario
+        alert('El mensaje se envió correctamente. ¡Gracias por contactarme¡, En breve me estaré comunicando con tigo');
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+
+// Envío con error
+        console.error('Error en la solicitud AJAX:', textStatus, errorThrown);
+        console.log('Respuesta del servidor:', jqXHR.responseText);
+          submitButton.html('Enviar mensaje'); // Restauramos el texto original del botón
+          submitButton.prop('disabled', false); // Habilitamos el botón nuevamente
+        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo nuevamente.');
+        }
+    });
+    });
 });
 
 })(jQuery)

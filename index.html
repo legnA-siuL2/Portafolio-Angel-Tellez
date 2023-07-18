@@ -1,672 +1,1097 @@
+<!-- Made by
+================================================================
+* Template:  	 Portafolio-Angel Tellez
+* Written by: 	 Luis Angel Tellez Rojas
+* Description:   Main HTML File
+================================================================
+-->
+<!-- Tabla de contenido
+=================================================
+-Tabla de contenido.
+=================================================
+	1. Metadata & Links (<head>)
+  2. Preloader
+  3. Document Wrapper
+    3.1 Header
+      3.1.1 Navbar
+        3.1.1.1 Logo
+        3.1.1.2 Navbar List
+        3.1.1.3 Social Networks
+        3.1.1.4 NavBar Mobile button
+    3.2 Content
+      3.2.1 Home
+      3.2.2 Acerca de mi
+        3.2.1.1 Encabezado
+        3.2.2.2 Descripcion
+        3.2.2.3 Datos
+        3.2.2.4 Logros y contador
+      3.2.3 Servicios
+        3.2.3.1 Encabezado
+        3.2.3.2 Contenido
+      3.2.4 Curriculum
+        3.2.4.1 Encabezado
+        3.2.4.2 Trayectoria
+          3.2.4.2.1 Formación academica
+          3.2.4.2.2 Experiencia Profesional
+        3.2.4.3 Habilidades
+          3.2.4.3.1 Habilidades 1 a 3
+          3.2.4.3.2 Habilidades 4 a 6
+        3.2.4.4 Botón Descargar HV
+      3.2.5 Portafolio
+        3.2.5.1 Encabezado
+        3.2.5.2 Filter Menu (Isotope Filter)
+        3.2.5.3 Proyectos en Modal
+      3.2.6 Referencias
+        3.2.6.1 Encabezado
+        3.2.6.2 Carrusel referencias
+      3.2.7 Contacto
+        3.2.7.1 Encabezado
+        3.2.7.2 Datos contacto
+        3.2.7.3 Formulario de contacto
+    3.3 Footer
+  4. Extras & accessories
+    4.1 Bootstrap Modals
+      4.1.1 Modales Proyectos
+        4.1.1.1 Modal VeggyFoods
+        4.1.1.2 Modal Base Proyectos
+      4.1.2 Modales Otras secciones
+        4.1.2.1 Modal Terminos & política
+        4.1.2.2 Modal Copyright & descargos
+    4.2 others
+      4.2.1 Switcher de Estilos
+      4.2.2 Boton Back to Top
+  5. Scripts 
+=======================================================-->
+
+<!-- ========================== 
+1. Metadata & Links   <head>     // (contiene los metadatos y las etiquetas link donde se importan las librerias usadas)
+=============================== -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Angel Tellez, Portfolio">
+  <meta name="keywords" content="Angel Tellez, Portafolio">
   <meta name="description" content="Este es mi portafolio personalizado, creado con el conocimiento obtenido en ENYOI">
   <meta name="author" content="Luis Angel Tellez Rojas">
-  <title>Portfolio-Angel Tellez</title>
+  <title>Portafolio-Angel Tellez</title>
   <link rel="icon" type="image/png" href="images/icon.png" sizes="16x16">
-
-<!-- Web Fonts -->
+  
+  <!-- Web Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<!-- Stylesheets
-============================== -->
-<!-- Bootstrap -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<!-- Font Awesome Icon -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<!-- Owl Carousel -->
+  <!-- Owl Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<!-- Magnific Popup -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
-<!-- Custom Stylesheet -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-<!-- Colors Css -->
+  <!-- Colors Css -->
   <link id="color-switcher" type="text/css" rel="stylesheet" href="#" />
 </head>
-
+<!-- ===== Metadata & Links   
+==========  <head> End  ======= -->
 <body class="side-header" data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="1">
-
-<!-- Preloader -->
-<div class="preloader">
-  <div class="lds-ellipsis">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  
+  <!-- ========================== 
+  2. Preloader                     // (contiene los elementos Div para el efecto de Load de la pagina inicial. se le dan atributos mediante CSS)
+  =============================== -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
-</div>
-<!-- Preloader End --> 
-
-<!-- Document Wrapper   
-=============================== -->
-<div id="main-wrapper"> 
-  <!-- Header
-  ============================ -->
-  <header id="header" class="sticky-top"> 
-    <!-- Navbar -->
-    <nav class="primary-menu navbar navbar-expand-lg navbar-dark bg-dark border-bottom-0">
-      <div class="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2"> 
-        
-        <!-- Logo --> 
-        <a href="index.html" class="mb-lg-auto mt-lg-4">
-			<span class="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
-				<img class="img-fluid rounded-pill d-block" src="images/profile.jpg" title="Soy Luis Angel" alt="Demasiado bello para mostrar UwU">
-			</span>
-			<h1 class="text-5 text-white text-center mb-0 d-lg-block">Angel Tellez</h1>
-        </a> 
-        <!-- Logo End -->
-        
-        <div id="header-nav" class="collapse navbar-collapse w-100 my-lg-auto">
-          <ul class="navbar-nav text-lg-center my-lg-auto py-lg-3">
-            <li class="nav-item"><a class="nav-link smooth-scroll active" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Acerca de mi</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">servicios</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#resume">Curriculum</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portafolio</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#testimonial">Testimonios</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-        <ul class="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
-          <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" title="LinkedIn" data-bs-placement="top" href="https://www.linkedin.com/in/luis-angel-tellez-rojas-879525145/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-          <li class="social-icons-facebook"><a data-bs-toggle="tooltip" title="Facebook" href="https://www.facebook.com/LegnaSiul021" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-icons-instagram"><a data-bs-toggle="tooltip" title="Instagram" data-bs-placement="top" href="https://www.instagram.com/legnasiul_1021/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-          <li class="social-icons-twitter"><a data-bs-toggle="tooltip" title="Twitter" href="https://twitter.com/_Legna_Siul_" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        </ul>        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
-    <!-- Navbar End --> 
-  </header>
-  <!-- Header End --> 
-		
-  <!-- Content
-  ============================================= -->
-  <div id="content" role="main"> 
-    
-    <!-- Intro
-    ============================================= -->
-    <section id="home">
-      <div class="hero-wrap">
-        <div class="hero-mask opacity-8 bg-dark"></div>
-        <div class="hero-bg parallax" style="background-image:url('images/intro-bg.jpg');"></div>
-        <div class="hero-content section d-flex min-vh-100">
-          <div class="container my-auto">
-            <div class="row">
-              <div class="col-12 text-center">
-                <div class="typed-strings">
-                  <p>Hola, mucho gusto.</p>
-                  <p>Soy Analista contable.</p>
-                  <p>Soy Analista Financiero.</p>
-                  <p>Soy Fullstack Developer.</p>
-                  <p>Soy Angel Tellez</p>
-                  <p>!Trabajemos juntos¡</p>
-                </div>
-                <p class="text-7 fw-500 text-white mb-2 mb-md-3">Bienvenido</p>
-                <h2 class="text-16 fw-600 text-white mb-2 mb-md-3"><span class="typed"></span></h2>
-                <p class="text-5 text-light mb-4">Con sede en Bogotá D.C, Colombia.</p>
-				<a href="#contact" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">Trabaja con migo</a>
-              </div>
-            </div>
-          </div>
-          <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fa fa-chevron-down"></i></span></a> </div>
-      </div>
-    </section>
-    <!-- Intro end --> 
-    
-    <!-- About
-    ============================================= -->
-    <section id="about" class="section">
-      <div class="container px-lg-5"> 
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Acerca de mi</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Conóceme<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end-->
-        
-        <div class="row gy-5">
-          <div class="col-lg-7 col-xl-8 text-center text-lg-start">
-            <h2 class="text-7 fw-600 mb-3">Yo soy <span class="text-primary">Angel Tellez,</span> un Junior Fullstack-Developer, Analista Financiero y Contable</h2>
-            <p>¡Hola! Soy un apasionado Fullstack Developer Junior en busca de nuevas oportunidades para aplicar mis habilidades y conocimientos en el desarrollo web. Si estás buscando un desarrollador entusiasta y dedicado con una sólida base analítica y financiera, estoy listo para embarcarme en nuevos proyectos y hacer crecer tu equipo. ¡Juntos, podemos crear soluciones web innovadoras y de calidad!</p>
-            <p>Aunque soy nuevo en el area del Desarrollo, cuento con mas de 10 años de experiencia en el mundo financiero y contable que me han enseñado a ser metódico, analítico y orientado a resultados. Ahora, como desarrollador, aplico estas habilidades para crear soluciones web eficientes y funcionales.</p>
-            <p>Me encanta enfrentar desafíos y aprender nuevas tecnologías, y estoy emocionado de sumergirme en el mundo del desarrollo web para ampliar mi conjunto de habilidades, haciendo crecer tu negocio en el camino.</p>
-          </div>
-          <div class="col-lg-5 col-xl-4">
-            <div class="ps-lg-4">
-              <ul class="list-style-2">
-                <li class=""><span class="fw-600 me-2">Nombre:</span>Luis Angel Tellez</li>
-                <li class=""><span class="fw-600 me-2">Email:</span><a href="mailto:chat@simone.com">luis.angel_021@hotmail.com</a></li>
-                <li class=""><span class="fw-600 me-2">Edad:</span>25</li>
-                <li class="border-0"><span class="fw-600 me-2">Lugar:</span>Bogotá D.C, Colombia</li>
-              </ul>
-              <a href="/Protfolio_Angel_Tellez/Insumos/Signed_CV.pdf" target="_blank" class="btn btn-primary rounded-pill">Descarga mi CV</a> </div>
-          </div>
-        </div>
-        <div class="brands-grid separator-border mt-5">
-          <div class="row">
-            <div class="col-6 col-md-3">
-              <div class="featured-box text-center">
-                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="20">10</span>+</h4>
-                <p class="mb-0">Experiencia Laboral</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="featured-box text-center">
-                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="100">50</span>+</h4>
-                <p class="mb-0">Clientes Felices</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="featured-box text-center">
-                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="500">150</span>+</h4>
-                <p class="mb-0">Projectos finalizados</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="featured-box text-center">
-                <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="38">20</span></h4>
-                <p class="mb-0">Reconocimientos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About end --> 
-    
-    <!-- Services
-    ============================================= -->
-    <section id="services" class="section bg-light">
-      <div class="container px-lg-5"> 
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">servicios</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">¿Que es lo que hago?<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end-->
-        
-        <div class="row">
-          <div class="col-lg-11 mx-auto">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="featured-box style-3 mb-5">
-                  <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-desktop"></i></div>
-                  <h3>Web Design</h3>
-                  <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="featured-box style-3 mb-5">
-                    <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-pencil-ruler"></i> </div>
-                    <h3>UI/UX Design</h3>
-                    <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="featured-box style-3 mb-5">
-                    <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-paint-brush"></i> </div>
-                    <h3>App Design &amp; Develop</h3>
-                    <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                 <div class="featured-box style-3 mb-5 mb-md-0">
-                   <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-chart-area"></i> </div>
-                   <h3>Business Analysis</h3>
-                   <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-                 </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services end --> 
-    
-    <!-- Resume
-    ============================================= -->
-    <section id="resume" class="section">
-      <div class="container px-lg-5"> 
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Summary</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Resume<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end-->
-        
-        <div class="row gx-5"> 
-          <!-- My Education -->
-          <div class="col-md-6">
-            <h2 class="text-6 fw-600 mb-4">My Education</h2>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2000 - 2004</p>
-              <h3 class="text-5">Computer Science</h3>
-              <p class="text-danger">International University</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2005 - 2008</p>
-              <h3 class="text-5">Bachelor Degree</h3>
-              <p class="text-danger">University of California</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2009 - 2012</p>
-              <h3 class="text-5">Master Degree</h3>
-              <p class="text-danger">Harvard University</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-          </div>
-          
-          <!-- My Experience -->
-          <div class="col-md-6">
-            <h2 class="text-6 fw-600 mb-4">My Experience</h2>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2012 - 2013</p>
-              <h3 class="text-5">Jr. UI UX Designer</h3>
-              <p class="text-danger">Themeforest</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2014 - 2016</p>
-              <h3 class="text-5">Jr. Product Designer</h3>
-              <p class="text-danger">Dribbble</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-            <div class="bg-white border rounded p-4 mb-4">
-              <p class="badge bg-primary text-2 fw-400">2017 - 2019</p>
-              <h3 class="text-5">Product Designer</h3>
-              <p class="text-danger">Adobe</p>
-              <p class="mb-0">Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-            </div>
-          </div>
-        </div>
-        <!-- My Skills -->
-		<h2 class="text-6 fw-600 mt-4 mb-4">My Skills</h2>
-        <div class="row gx-5">
-          <div class="col-md-6">
-            <p class="text-dark fw-500 text-start mb-2">Web Design <span class="float-end">65%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p class="text-dark fw-500 text-start mb-2">HTML/CSS <span class="float-end">95%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p class="text-dark fw-500 text-start mb-2">JavaScript <span class="float-end">80%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <p class="text-dark fw-500 text-start mb-2">React JS <span class="float-end">70%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p class="text-dark fw-500 text-start mb-2">Angular Js <span class="float-end">60%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p class="text-dark fw-500 text-start mb-2">Bootstrap <span class="float-end">99%</span></p>
-            <div class="progress progress-sm mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5"><a href="#" class="btn btn-outline-secondary rounded-pill shadow-none">Download CV <span class="ms-1"><i class="fas fa-download"></i></span></a></div>
-      </div>
-    </section>
-    <!-- Resume end --> 
-    
-    <!-- Portfolio
-    ============================================= -->
-    <section id="portfolio" class="section bg-light">
-      <div class="container px-lg-5"> 
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Portfolio</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">My Work<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end--> 
-        
-        <!-- Filter Menu -->
-        <ul class="portfolio-menu nav nav-tabs justify-content-center border-bottom-0 mb-5">
-          <li class="nav-item"> <a data-filter="*" class="nav-link active" href="">All</a></li>
-          <li class="nav-item"> <a data-filter=".design" href="" class="nav-link">Design</a></li>
-          <li class="nav-item"> <a data-filter=".brand" href="" class="nav-link">Brand</a></li>
-          <li class="nav-item"> <a data-filter=".photos" href="" class="nav-link">Photos</a></li>
-        </ul>
-        <!-- Filter Menu end -->
-        <div class="portfolio popup-ajax-gallery">
-          <div class="row portfolio-filter g-4">
-            <div class="col-sm-6 col-lg-4 brand">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-1.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-1.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-2.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-2.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 artwork photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-3.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-3.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 artwork brand photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-4.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-4.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-5.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-5.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 brand">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-6.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-6.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 design photos">
-              <div class="portfolio-box rounded">
-                <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/project-7.jpg" alt="">
-                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-7.html"></a>
-                    <div class="portfolio-overlay-details">
-                      <h5 class="text-white fw-400">Project Title</h5>
-                      <span class="text-light">Category</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio end --> 
-    
-    <!-- Testimonial
-    ============================================= -->
-    <section id="testimonial" class="section">
-      <div class="container px-lg-5"> 
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Testimonial</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Client Speak<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end-->
-        
-        <div class="owl-carousel owl-theme" data-loop="true" data-nav="false" data-autoplay="false" data-margin="25" data-stagepadding="0" data-slideby="1" data-items-xs="1" data-items-sm="1" data-items-md="1" data-items-lg="2">
-          <div class="item">
-            <div class="bg-light rounded p-5">
-              <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/testimonial/client-sm-3.jpg" alt="">
-                <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Dennis Jacques</strong> <span class="text-muted fw-500">User from USA</span></p>
-              </div>
-              <p class="text-dark fw-500 mb-4">â€œOnly trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.â€</p>
-              <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> </span> </div>
-          </div>
-          <div class="item">
-            <div class="bg-light rounded p-5">
-              <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/testimonial/client-sm-1.jpg" alt="">
-                <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Jay Shah</strong> <span class="text-muted fw-500">Founder at Icomatic Pvt Ltd</span></p>
-              </div>
-              <p class="text-dark fw-500 mb-4">"Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure.â€</p>
-              <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> </span> </div>
-          </div>
-          <div class="item">
-            <div class="bg-light rounded p-5">
-              <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/testimonial/client-sm-2.jpg" alt="">
-                <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Patrick Cary</strong> <span class="text-muted fw-500">Freelancer from USA</span></p>
-              </div>
-              <p class="text-dark fw-500 mb-4">â€œI am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure.â€</p>
-              <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> </span> </div>
-          </div>
-          <div class="item">
-            <div class="bg-light rounded p-5">
-              <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/testimonial/client-sm-4.jpg" alt="">
-                <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Chris Tom</strong> <span class="text-muted fw-500">User from UK</span></p>
-              </div>
-              <p class="text-dark fw-500 mb-4">â€œI have used them twice now. Good rates, very efficient service and priced simply dummy text of the printing and typesetting industry quidam interesset his et. Excellent.â€</p>
-              <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> </span> </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Testimonial end --> 
-    
-    <!-- Contact Me
-    ============================================= -->
-    <section id="contact" class="section bg-light">
-      <div class="container px-lg-5">
-        <!-- Heading -->
-        <div class="position-relative d-flex text-center mb-5">
-          <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Contact</h2>
-          <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Get in Touch<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
-        <!-- Heading end-->
-        <div class="row gy-5">
-          <div class="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
-            <h2 class="mb-3 text-5 text-uppercase">Address</h2>
-            <p class="text-3 mb-4">4th Floor, Plot No.22,<br>
-              145 Murphy Canyon Rd.<br>
-              San Diego CA 2028 </p>
-            <p class="text-3 mb-1"><span class="text-primary text-4 me-2"><i class="fas fa-phone"></i></span>(060) 444 434 444</p>
-            <p class="text-3 mb-1"><span class="text-primary text-4 me-2"><i class="fas fa-fax"></i></span>(060) 555 545 555</p>
-            <p class="text-3 mb-4"><span class="text-primary text-4 me-2"><i class="fas fa-envelope"></i></span>chat@simone.com</p>
-            <h2 class="mb-3 text-5 text-uppercase">Follow Me</h2>
-            <ul class="social-icons justify-content-center justify-content-md-start">
-              <li class="social-icons-dribbble"><a data-bs-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-              <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-              <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="social-icons-google"><a data-bs-toggle="tooltip" href="http://www.google.com/" target="_blank" title="Google"><i class="fab fa-google"></i></a></li>
-              <li class="social-icons-github"><a data-bs-toggle="tooltip" href="http://www.github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+  <!-- ===== Preloader End ====== --> 
+  
+  <!-- ========================== 
+  3. Document Wrapper              // (un div donde se compacta todo el contenido del sitio)
+  =============================== -->
+  <div id="main-wrapper"> 
+    <!-----------------------------------
+    3.1 Header                   // (Contiene los elementos del encabezado los cuales se muestran en toda la pagina, como un panel de navegación.)
+    ------------------------------------->
+    <header id="header" class="sticky-top"> 
+      <!-- 3.1.1 Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dark bg-dark border-bottom-0">
+        <div class="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2"> 
+            
+          <!-- 3.1.1.1 Logo --> 
+          <a href="index.html" class="mb-lg-auto mt-lg-4">
+            <span class="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
+              <img class="img-fluid rounded-pill d-block" src="images/profile.jpg" title="Soy Luis Angel" alt="Demasiado bello para mostrar UwU" sizes="60x60">
+            </span>
+            <h1 class="text-5 text-white text-center mb-0 d-lg-block">Angel Tellez</h1>
+          </a> 
+          <!-- Logo End -->
+          <!-- 3.1.1.2 Navbar List --> 
+          <div id="header-nav" class="collapse navbar-collapse w-100 my-lg-auto">
+            <ul class="navbar-nav text-lg-center my-lg-auto py-lg-3">
+              <li class="nav-item"><a class="nav-link smooth-scroll active" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Acerca de mi</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">servicios</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#resume">Curriculum</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portafolio</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#references">Referencias</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contacto</a></li>
             </ul>
           </div>
-          <div class="col-md-8 col-xl-9 order-0 order-md-1">
-            <h2 class="mb-3 text-5 text-uppercase text-center text-md-start">Send us a note</h2>
-			<form id="contact-form" action="php/mail.php" method="post">
-              
-			  <div class="row g-4">
-                <div class="col-xl-6">
-                    <input name="name" type="text" class="form-control" required placeholder="Name">
+          <!-- Navbar List End -->
+          <!-- 3.1.1.3 Social Networks --> 
+          <ul class="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
+            <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" title="LinkedIn" data-bs-placement="top" href="https://www.linkedin.com/in/luis-angel-tellez-rojas-879525145/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="social-icons-facebook"><a data-bs-toggle="tooltip" title="Facebook" href="https://www.facebook.com/LegnaSiul021" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="social-icons-instagram"><a data-bs-toggle="tooltip" title="Instagram" data-bs-placement="top" href="https://www.instagram.com/legnasiul_1021/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="social-icons-twitter"><a data-bs-toggle="tooltip" title="Twitter" href="https://twitter.com/_Legna_Siul_" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="social-icons-whatsapp"><a data-bs-toggle="tooltip" title="Whatsapp" href="https://wa.me/573138521949?text=Hola%20Gracias%20por%20tu%20interes%20en%20trabajar%20Juntos,%20%C2%BFcomo%20puedo%20ayudarte?" target="_blank"><i class="fab fa-whatsapp"></i></a></li>        
+          </ul>
+          <!-- Social Networks End -->
+          <!-- 3.1.1.4 NavBar Mobile button -->         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav"><span></span><span></span><span></span></button>
+          <!-- NavBar Mobile button End -->  
+        </div>
+      </nav>
+      <!-- Navbar End --> 
+    </header>
+    <!-- Header End --> 
+
+    <!-----------------------------------
+    3.2 Content                  // (Contenido, donde conpactamos las diferentes secciones que hacen parte del portafolio.)
+    ------------------------------------->
+    <div id="content" role="main"> 
+      
+      <!-- 3.2.1 Home -->
+      <section id="home">
+        <div class="angel-wrap">
+          <div class="angel-mask opacity-8 bg-dark"></div>
+          <div class="angel-bg parallax" style="background-image:url('images/intro-bg.jpg');"></div>
+          <div class="angel-content section d-flex min-vh-100">
+            <div class="container my-auto">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <div class="typed-strings">
+                    <p>Hola, mucho gusto.</p>
+                    <p>Soy Analista contable.</p>
+                    <p>Y Analista Financiero.</p>
+                    <p>Soy Fullstack Developer.</p>
+                    <p>Soy Angel Tellez</p>
+                    <p>¡Trabajemos juntos!</p>
+                  </div>
+                  <p class="text-7 fw-500 text-white mb-2 mb-md-3">Bienvenido</p>
+                  <h2 class="text-16 fw-600 text-white mb-2 mb-md-3"><span class="typed"></span></h2>
+                  <p class="text-5 text-light mb-4">Con sede en Bogotá D.C, Colombia.</p>
+                  <a href="#contact" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">Trabaja conmigo</a>
                 </div>
-                <div class="col-xl-6">
-                    <input name="email" type="email" class="form-control" required placeholder="Email">
-                </div>
-				<div class="col">
-					<textarea name="form-message" class="form-control" rows="5" required placeholder="Tell us more about your needs........"></textarea>
-				</div>
               </div>
-			  
-              <p class="text-center mt-4 mb-0">
-				<button id="submit-btn" class="btn btn-primary rounded-pill d-inline-flex" type="submit">Send Message</button>
-              </p>
-            </form>
+            </div>
+            <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fa fa-chevron-down"></i></span></a>
+          </div>
+        </div>
+      </section>
+      <!-- Home end -->
+      
+      <!-- 3.2.2 Acerca de mi -->
+      <section id="about" class="section">
+        <div class="container px-lg-5"> 
+          <!-- 3.2.2.1 Heading -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Acerca de mi</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Conóceme<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Heading end--> 
+          <div class="row gy-5">
+            <!-- 3.2.2.2 Descripcion -->
+            <div class="col-lg-7 col-xl-8 text-center text-lg-start">
+              <h2 class="text-7 fw-600 mb-3">Soy <span class="text-primary">Angel Tellez,</span> un Junior Fullstack Developer, Analista Financiero y Contable</h2>
+              <p class ="text-justify text-2">¡Hola! Soy un apasionado Fullstack Developer Junior en busca de nuevas oportunidades para aplicar mis habilidades y conocimientos en el desarrollo web. Si estás buscando un desarrollador entusiasta y dedicado con una sólida base analítica y financiera, estoy listo para embarcarme en nuevos proyectos y hacer crecer tu equipo. ¡Juntos, podemos crear soluciones web innovadoras y de calidad!</p>
+              <p class ="text-justify text-2">Aunque soy nuevo en el area del Desarrollo, cuento con mas de 10 años de experiencia en el mundo financiero y contable que me han enseñado a ser metódico, analítico y orientado a resultados. Ahora, como desarrollador, aplico estas habilidades para crear soluciones web eficientes y funcionales.</p>
+            </div>
+            <!-- Descripcion End -->
+            <!-- 3.2.2.3 Datos -->
+            <div class="col-lg-5 col-xl-4">
+              <div class="ps-lg-4">
+                <ul class="list-style-2">
+                  <li class=""><span class="fw-600 me-2">Nombre:</span>Luis Angel Tellez</li>
+                  <li class=""><span class="fw-600 me-2">Email:</span><a href="mailto:luis.angel_021@hotmail.com">luis.angel_021@hotmail.com</a></li>
+                  <li class=""><span class="fw-600 me-2">Edad:</span>25</li>
+                  <li class="border-0"><span class="fw-600 me-2">Lugar:</span>Bogotá D.C, Colombia</li>
+                </ul>
+                <a href="Insumos/Signed_CV.pdf" target="_blank" class="btn btn-primary rounded-pill">Descarga mi CV</a> </div>
+            </div>
+            <!-- Datos End -->
+          </div>
+          <!-- 3.2.2.4 Logros y contador -->
+          <div class="brands-grid separator-border mt-5">
+            <div class="row">
+              <div class="col-6 col-md-3">
+                <div class="featured-box text-center">
+                  <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="10">10</span>+</h4>
+                  <p class="mb-0 text-primary">Años de Experiencia</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="featured-box text-center">
+                  <h4 class="text-12 text-muted mb-0"><span class="counter " data-from="0" data-to="50">50</span>+</h4>
+                  <p class="mb-0 text-primary">Clientes Felices</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="featured-box text-center">
+                  <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="150">150</span>+</h4>
+                  <p class="mb-0 text-primary">Projectos Finalizados</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="featured-box text-center">
+                  <h4 class="text-12 text-muted mb-0"><span class="counter" data-from="0" data-to="20">20</span></h4>
+                  <p class="mb-0 text-primary">Reconocimientos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Logros y contador End-->
+        </div>
+      </section>
+      <!-- Acerca de mi End--> 
+      
+      <!-- 3.2.3 Servicios -->
+      <section id="services" class="section bg-light">
+        <div class="container px-lg-5"> 
+          <!-- 3.2.3.1 Encabezado -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">servicios</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">¿Que es lo que hago?<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Encabezado end-->
+          <!-- 3.2.3.2 Contenido -->
+          <div class="row">
+            <div class="col-lg-11 mx-auto">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="featured-box style-3 mb-5">
+                    <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Front end Developer:</h3>
+                    <p class="mb-0">Diseño y desarrollo interfaces web impresionantes que cautivan a los usuarios visualmente.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="featured-box style-3 mb-5">
+                      <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fa-solid fa-gear"></i> </div>
+                      <h3>Back end Developer:</h3>
+                      <p class="mb-0">Desarrollo la infraestructura y funcionalidad detrás de las aplicaciones web, asegurando un rendimiento robusto y seguro.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="featured-box style-3 mb-5">
+                      <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-database"></i> </div>
+                      <h3>Gestor de Bases de datos:</h3>
+                      <p class="mb-0">Optimizo consultas y rendimiento de bases de datos para mejorar la eficiencia y la velocidad de acceso a los datos.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="featured-box style-3 mb-5 mb-md-0">
+                      <div class="featured-box-icon text-primary bg-white shadow-sm rounded"> <i class="fas fa-chart-area"></i> </div>
+                      <h3>Analista financiero:</h3>
+                      <p class="mb-0">Analizo tendencias y patrones financieros para ofrecer estrategias que maximicen los rendimientos y minimicen los riesgos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- Contenido End -->
+        </div>
+      </section>
+      <!-- Servicios end --> 
+      
+      <!-- 3.2.4 Curriculm -->
+      <section id="resume" class="section">
+        <div class="container px-lg-5"> 
+          <!-- 3.2.4.1 Encabezado -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Curriculum</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Trayectoria<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Encabezado End-->
+          <!-- 3.2.4.2 Trayectoria -->
+          <div class="row gx-5"> 
+            <!-- 3.2.4.2.1 Formación Academica -->
+            <div class="col-md-6">
+              <h2 class="text-6 fw-600 mb-4">Formación Academica</h2>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2023 - 2023</p>
+                <h3 class="text-5">Fullstack-dev intensive bootcamp</h3>
+                <p class="text-success">ENYOI</p>
+                <p class="mb-0">Bootcamp intensivo en desarrollo web fullstack con especialización en React <i class="fa-brands fa-react text-primary text-6" data-bs-toggle="tooltip" title="React"></i> y nodeJs <i class="fa-brands fa-node text-primary text-6" data-bs-toggle="tooltip" title="NodeJs"></i> </p>
+              </div>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2014 - 2016</p>
+                <h3 class="text-5">Tecnólogo “Contabilidad y Finanzas”</h3>
+                <p class="text-success">SENA Centro de Servicios Financieros</p>
+                <p class="mb-0">Formacion profesional tipo pregrado en el área contable <i class="fa-solid fa-business-time text-primary text-6" data-bs-toggle="tooltip" title="Contaduria Publica"></i> y financiera <i class="fa-solid fa-comments-dollar text-primary text-6" data-bs-toggle="tooltip" title="Finanzas"></i> </p>
+              </div>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2012 - 2014</p>
+                <h3 class="text-5">Técnico “Contabilización Op. Comerciales y financieras”</h3>
+                <p class="text-success">SENA Centro de Servicios Financieros</p>
+                <p class="mb-0">Formacion Tecnica en el área contable <i class="fa-solid fa-calculator text-primary text-6" data-bs-toggle="tooltip" title="Contaduria Publica"></i> y financiera <i class="fa-solid fa-chart-simple text-primary text-6" data-bs-toggle="tooltip" title="Finanzas"></i> </p>
+              </div>
+            </div>
+            <!-- Formación Academica End -->
+            <!-- 3.2.4.2.2 Experiencia Profesional-->
+            <div class="col-md-6">
+              <h2 class="text-6 fw-600 mb-4">Experiencia Profesional</h2>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2022 - 2023</p>
+                <h3 class="text-5">FreeLancer Jr Fullstack-Dev</h3>
+                <p class="text-success">independiente</p>
+                <p class="mb-0">Creación de multiples proyectos personales y para terceros de forma frelancer. <i class="fa-solid fa-user  text-primary text-6" data-bs-toggle="tooltip" title="mas de 1 Año de experiencia empirica"></i></p>
+              </div>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2022 - 2023</p>
+                <h3 class="text-5">Analista Sennior Financiero y Contable </h3>
+                <p class="text-success">Aranda Software Andina SAS</p>
+                <p class="mb-0">Compañia del sector IT dedicada al desarrollo de Software e innovación de I+D. poniendo en practica amplia experiencia en el area<i class="fa-solid fa-building text-primary text-6" data-bs-toggle="tooltip" title="Jun-2022 a la actulidad"></i></p>
+              </div>
+              <div class="bg-white border rounded p-4 mb-4">
+                <p class="badge bg-primary text-2 fw-400">2013 - 2022</p>
+                <h3 class="text-5">Analista Contable y Financiero</h3>
+                <p class="text-success">Multiples compañias de todos los sectores</p>
+                <p class="mb-0">Mas de 10 años de amplia experiencia en multiples compañias. <i class="fa-solid fa-hat-wizard text-primary text-6" data-bs-toggle="tooltip" title="Oct-2013 a la actualidad"></i></p>
+              </div>
+            </div>
+            <!-- Experiencia Profesional End -->
+          </div>
+          <!-- Trayectoria End -->
+          <!-- 3.2.4.3 Habilidades -->  
+          <h2 class="text-6 fw-600 mt-4 mb-4">Mis habilidades</h2>
+            <div class="row gx-5">
+              <!-- 3.2.4.3.1 Habilidades 1 a 3-->
+              <div class="col-md-6">
+                <p class="text-dark fw-500 text-start mb-2">HTML <i class="fa-brands fa-html5 text-primary text-6" data-bs-toggle="tooltip" title="HTML5"></i> / CSS <i class="fa-brands fa-css3-alt text-primary text-6" data-bs-toggle="tooltip" title="CSS"></i><span class="float-end">90%</span></p>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                </div> 
+                <br>
+                <p class="text-dark fw-500 text-start mb-2">Javascript <i class="fa-brands fa-square-js text-primary text-6" data-bs-toggle="tooltip" title="Javascript"></i><span class="float-end">75%</span></p>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                </div> 
+                <br>
+                <p class="text-dark fw-500 text-start mb-2">Bases de Datos <i class="fa-solid fa-database text-primary text-6" data-bs-toggle="tooltip" title="Manejo de bases de datos"></i><span class="float-end">80%</span></p>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%"></div>
+                  </div> 
+              </div>
+              <!-- Habilidades 1 a 3 End -->
+              <!-- 3.2.4.3.2 Habilidades 4 a 6-->
+              <div class="col-md-6">
+                <p class="text-dark fw-500 text-start mb-2">ReactJs <i class="fa-brands fa-react text-primary text-6" data-bs-toggle="tooltip" title="React"></i><span class="float-end">70%</span></p>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%"></div>
+                  </div> 
+                  <br>
+                <p class="text-dark fw-500 text-start mb-2">NodeJs <i class="fa-brands fa-node text-primary text-6" data-bs-toggle="tooltip" title="NodeJs"></i><span class="float-end">70%</span></p>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%"></div>
+                  </div> 
+                  <br>
+                  <p class="text-dark fw-500 text-start mb-2">Habilidades financieras <i class="fa-solid fa-sack-dollar text-primary text-6" data-bs-toggle="tooltip" title="Habilidades financieras"></i><span class="float-end">99%</span></p>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 99%"></div>
+                  </div> 
+              </div>
+              <!-- Habilidades 4 a 6 End -->
+            </div>
+          <!-- 3.2.4.4 Botoón Descargar HV --> 
+          <div class="text-center mt-5"><a href="Insumos/Signed_CV.pdf" target="blank" class="btn btn-outline-primary rounded-pill shadow-none">Descarga CV mayor detalle <span class="ms-1"><i class="fas fa-download"></i></span></a></div>
+          <!-- Botón Descargar HV End--> 
+        </div>
+      </section>
+      <!-- Curriculum End --> 
+      
+      <!-- 3.2.5 Portafolio -->
+      <section id="portfolio" class="section bg-light">
+        <div class="container px-lg-5"> 
+          <!-- 3.2.5.1 Encabezado -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Portafolio</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Conoce Mis Trabajos<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Encabezado End--> 
+          
+          <!-- 3.2.5.2 Filter Menu (Isotope Filter) -->
+          <ul class="portfolio-menu nav nav-tabs justify-content-center border-bottom-0 mb-5">
+            <li class="nav-item"> <a data-filter="*" class="nav-link active" href="">Todo</a></li>
+            <li class="nav-item"> <a data-filter=".fullstack-dev" href="" class="nav-link">Fullstack-Dev</a></li>
+            <li class="nav-item"> <a data-filter=".analista-financiero" href="" class="nav-link">Analista Financiero</a></li>
+            <li class="nav-item"> <a data-filter=".analista-contable" href="" class="nav-link">Analista Contable</a></li>
+          </ul>
+          <!-- Filter Menu end -->
+          
+          <!-- 3.2.5.3 Proyectos en Modal -->
+          <div class="portfolio popup-ajax-gallery">
+            <div class="row portfolio-filter g-4">
+              <div class="col-sm-6 col-lg-4 fullstack-dev">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#veggyfoodsModal">
+                      <img class="img-fluid d-block" src="images/projects/project-1.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">VeggyFoods</h5>
+                          <span class="text-light">Fullstack-Dev</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 analista-financiero">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-2.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 analista-contable">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-3.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 fullstack-dev analista-financiero">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-4.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 fullstack-dev analista-contable">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-5.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 fullstack-dev analista-financiero analista-contable">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-6.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 analista-financiero analista-contable">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-7.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 analista-financiero">
+                <div class="portfolio-box rounded">
+                  <div class="portfolio-img rounded"> 
+                    <button type="button" class="btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class="img-fluid d-block" src="images/projects/project-8.jpg" alt="">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-details">
+                          <h5 class="text-white fw-400">Proyecto Disponible</h5>
+                          <span class="text-light">Tipo de proyecto</span> 
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyectos en Modal End-->
+        </div>           
+      </section>
+      <!-- Portafolio End -->
+      
+      <!-- 3.2.6 Referencias -->
+      <section id="references" class="section">
+        <div class="container px-lg-5"> 
+          <!-- 3.2.6.1 Encabezado -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Referencias</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Referencias Laborales<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Encabezado End-->
+          <!-- 3.2.6.2 Carrusel referencias -->
+          <div class="owl-carousel owl-theme" data-loop="true" data-nav="false" data-autoplay="false" data-margin="25" data-stagepadding="0" data-slideby="1" data-items-xs="1" data-items-sm="1" data-items-md="1" data-items-lg="2">
+            <div class="item">
+              <div class="bg-light rounded p-5">
+                <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/references/reference-1.jpg" alt="">
+                  <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Aranda Software Andina</strong> <span class="text-muted fw-500">Analista Financiero y Contable</span></p>
+                </div>
+                <p>
+                  <ul>
+                    <li class="text-dark fw-500">Analisis consolidación y registro de Nomina en bases de datos</li>
+                    <li class="text-dark fw-500">Creación y desarrollo de informes y bases de datos</li>
+                    <li class="text-dark fw-500">Analisis y elaborción costos de desarrollo</li>
+                    <li class="text-dark fw-500">Apoyo en la ejecución del ciclo contable</li>
+                  </ul>
+                </p>
+                <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i></span> 
+              </div>
+            </div>
+            <div class="item">
+              <div class="bg-light rounded p-5">
+                <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/references/reference-2.jpg" alt="">
+                  <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Coschool SAS</strong> <span class="text-muted fw-500">Analista contable y administrativo</span></p>
+                </div>
+                <p>
+                  <ul>
+                    <li class="text-dark fw-500">Apoyar elaboración Estados Financieros y ejecución del ciclo contable</li>
+                    <li class="text-dark fw-500">Liquidación de impuestos y atención de requerimientos gubernamentales</li>
+                    <li class="text-dark fw-500">Control y elaboración ciclo de tesoreria</li>
+                    <li class="text-dark fw-500">Liquedación y consolidación Nomina</li>
+                  </ul>
+                </p>
+                <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i></span> 
+              </div>
+            </div>
+            <div class="item">
+              <div class="bg-light rounded p-5">
+                <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/references/reference-3.jpg" alt="">
+                  <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Textiles Swantex SA</strong> <span class="text-muted fw-500">Analista contable</span></p>
+                </div>
+                <p>
+                  <ul>
+                    <li class="text-dark fw-500">Coordinación de actividades y manejo de personal según objetivos</li>
+                    <li class="text-dark fw-500">Seguimiento al ciclo contable y elaboración de Estados Financieros</li>
+                    <li class="text-dark fw-500">Implementación y mejoramiento de Procesos y procedimientos</li>
+                    <li class="text-dark fw-500">Desarrollo de informes y bases de datos</li>
+                  </ul>
+                </p>
+                <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i></span> 
+              </div>
+            </div>
+            <div class="item">
+              <div class="bg-light rounded p-5">
+                <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/references/reference-4.jpg" alt="">
+                  <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Cia de vigilancia PPH Ltda.</strong> <span class="text-muted fw-500">Auxiliar contable</span></p>
+                </div>
+                <p>
+                  <ul>
+                    <li class="text-dark fw-500">Implementación Procesos y procedimientos nuevos, Consolidación</li>
+                    <li class="text-dark fw-500">Manejo de Personal, desarrollo trato y capacidad servicio al cliente</li>
+                    <li class="text-dark fw-500">Desarrollo implementación aplicativo cartera, Generación informes</li>
+                    <li class="text-dark fw-500">Apoyo en la ejecución del ciclo contable</li>
+                  </ul>
+                </p>
+                <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i></span> 
+              </div>
+            </div>
+            <div class="item">
+              <div class="bg-light rounded p-5">
+                <div class="d-flex align-items-center mt-auto mb-4"> <img class="img-fluid rounded-circle border d-inline-block w-auto" src="images/references/reference-5.jpg" alt="">
+                  <p class="ms-3 mb-0"><strong class="d-block text-dark fw-600">Sonia Alvarez</strong> <span class="text-muted fw-500">Asistente contable</span></p>
+                </div>
+                <p>
+                  <ul>
+                    <li class="text-dark fw-500">Fortalecimiento relaciones interpersonales y profesionales</li>
+                    <li class="text-dark fw-500">Consolidación capacidad de negociación y manejo de contratos</li>
+                    <li class="text-dark fw-500">Explotación del potencial FreeLancer de la carrera contable</li>
+                    <li class="text-dark fw-500">Manejo de varias compañias</li>
+                  </ul>
+                </p>
+                <span class="text-2"> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i></span> 
+              </div>
+            </div>
+          </div>
+          <!-- Carrusel referencias End-->
+        </div>
+      </section>
+      <!-- Referencias End --> 
+      
+      <!-- 3.2.7 Contacto -->
+      <section id="contact" class="section bg-light">
+        <div class="container px-lg-5">
+          <!-- 3.2.7.1 Encabezado -->
+          <div class="position-relative d-flex text-center mb-5">
+            <h2 class="text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0">Contacto</h2>
+            <p class="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">Contactame<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+          </div>
+          <!-- Encabezado End-->
+          <div class="row gy-5">
+            <!-- 3.2.7.2 Datos contacto -->
+            <div class="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
+              <h2 class="mb-3 text-5">Dirección</h2>
+              <p class="text-3 mb-4">Kr17A N°1 - 108<br>
+                To06 Apt 603<br>
+                Soacha Cundinamarca </p>
+                <p class="text-center mt-0 mb-0">
+                <button class="btn btn-outline-primary btn-sm rounded-pill shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Mapa</button>
+                </p>
+                  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title text-primary text-uppercase" id="offcanvasWithBothOptionsLabel">Mapa</h5>
+                      <button type="button" class="btn-close btn-outline-primary btn-sm rounded-pill shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body small">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418.03685200675017!2d-74.22576598737037!3d4.583396335366668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sus!4v1689312657748!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      <br>
+                      <br>
+                      Kr17A N°1-108 To06 Apt 603 Soacha Cundinamarca
+                    </div>
+                  </div>
+                <br>
+                <br>
+              <p class="text-3 mb-1"><span class="text-primary text-4 me-2"><i class="fa-solid fa-mobile-screen"></i></span>(+57) 313 852 1949</p>
+              <p class="text-3 mb-1"><span class="text-primary text-4 me-2"><i class="fa-brands fa-square-whatsapp"></i></span>(+57) 313 852 19 49</p>
+              <p class="text-2 mb-4"><span class="text-primary text-4 me-2"><i class="fa fa-envelope"></i></span>luis.angel_021@hotmail.com</p>
+              <h2 class="mb-3 text-5 text-uppercase">Redes Sociales</h2>
+              <ul class="social-icons justify-content-center justify-content-md-start">
+                <li class="social-icons-linkedin"><a data-bs-toggle="tooltip" title="LinkedIn" data-bs-placement="top" href="https://www.linkedin.com/in/luis-angel-tellez-rojas-879525145/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="social-icons-facebook"><a data-bs-toggle="tooltip" title="Facebook" href="https://www.facebook.com/LegnaSiul021" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-icons-instagram"><a data-bs-toggle="tooltip" title="Instagram" data-bs-placement="top" href="https://www.instagram.com/legnasiul_1021/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-icons-twitter"><a data-bs-toggle="tooltip" title="Twitter" href="https://twitter.com/_Legna_Siul_" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-icons-whatsapp"><a data-bs-toggle="tooltip" title="Whatsapp" href="https://wa.me/573138521949?text=Hola%20Gracias%20por%20tu%20interes%20en%20trabajar%20Juntos,%20%C2%BFcomo%20puedo%20ayudarte?" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+            <!-- Datos contacto End-->
+            <!-- 3.2.7.3 Formulario de contacto -->
+            <div class="col-md-8 col-xl-9 order-0 order-md-1">
+              <h2 class="mb-3 text-5 text-center text-md-start">Enviame tu e-mail</h2>
+              <form id="contact-form" action="https://formsubmit.co/7cb129dcb6a5c12581cd25521bf60dcd" method="POST">
+                <div class="row g-4">
+                    <div class="col-xl-6">
+                        <input name="name" type="text" class="form-control" required placeholder="Nombre">
+                    </div>
+                    <div class="col-xl-6">
+                        <input name="email" type="email" class="form-control" required placeholder="Correo electrónico">
+                    </div>
+                    <div class="col">
+                        <textarea name="form-message" class="form-control" rows="5" required placeholder="Cuéntame más a detalle, ¿qué necesitas?........"></textarea>
+                    </div>
+                </div>
+                <input name="_captcha" type="hidden" value="false">
+                <p class="text-center mt-4 mb-0">
+                  <button id="submit-btn" class="btn btn-primary rounded-pill d-inline-flex" type="submit">Enviar mensaje</button>
+                </p>
+              </form>
+            </div>
+            <!-- Formulario de contacto End-->
+          </div>
+        </div>
+      </section>
+      <!-- Contacto End --> 
+      
+    </div>
+    <!-- Content end --> 
+    
+    <!-----------------------------------
+    3.3 Footer                   // (Seccion de pie de pagina del sitio web.)
+    ------------------------------------->
+    <footer id="footer" class="section">
+      <div class="container px-lg-5">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-start">
+            <p class="mb-3 mb-lg-0">Copyright © 2023 <a href="#" class="fw-500">Angel</a>. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-lg-6">
+            <ul class="nav nav-separator justify-content-center justify-content-lg-end">
+              <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#terms-policy" href="#">Terminos & política</a></li>
+              <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#disclaimer" href="#">Copyright & descargos</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Contact Me end --> 
+    </footer>
+    <!-- Footer end --> 
     
   </div>
-  <!-- Content end --> 
+  <!-- ===Document Wrapper End=== -->
   
-  <!-- Footer
-  ============================================= -->
-  <footer id="footer" class="section">
-    <div class="container px-lg-5">
-      <div class="row">
-        <div class="col-lg-6 text-center text-lg-start">
-          <p class="mb-3 mb-lg-0">Copyright Â© 2022 <a href="#" class="fw-500">Simone</a>. All Rights Reserved.</p>
+  <!-- ========================== 
+  4. Extras & accessories          // (Seccion de extras y de plugs como el detalle de los modales y otro contenido adicional del sitio web)
+  =============================== -->
+  <div id="extras">
+    <!-----------------------------------
+    4.1 Bootstrap Modals          // (Contenido de los Modales usados en el sitio web.)
+    ------------------------------------->  
+    <div id="bootstrapmodals">
+      <!-- 4.1.1 Modales Proyectos-->
+      <div id="proyectmodals">
+        <!-- 4.1.1.1 Modal VeggyFoods -->
+        <div class="modal fade" id="veggyfoodsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 text-uppercase text-primary" id="exampleModalLabel">proyecto Veggy-Food</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="owl-carousel owl-theme modal-carousel" data-loop="true" data-nav="false" data-autoplay="false" data-margin="25" data-stagepadding="0" data-slideby="1" data-items-xs="1" data-items-sm="1" data-items-md="1" data-items-lg="1">
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-1.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food1</strong>
+                            <span class="text-muted fw-500">Home, menú de inicio dinamico</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-2.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food2</strong>
+                            <span class="text-muted fw-500">Sección Menu, opciones variadas en carrusel</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-3.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food3</strong>
+                            <span class="text-muted fw-500">Sección Ingrediente, con listado detallado</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-4.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food4</strong>
+                            <span class="text-muted fw-500">Seccion Delivery, Con mapa y contact form</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-5.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food5</strong>
+                            <span class="text-muted fw-500">Con opción dinamica para cabio de color</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-6.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Proyecto Veggy-Food6</strong>
+                            <span class="text-muted fw-500">Color que afecta todo el sitio web</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- Agrega más elementos .item según tus necesidades -->
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div>
+                        <h4 class="text-4">Información del Proyecto:</h4>
+                        <P class="modal-dialog modal-dialog-centered text-justify text-2">
+                        VeggyFoods es un impresionante proyecto de desarrollo de un sitio web que ofrece 
+                        una experiencia culinaria vegana excepcional. Con un diseño moderno y atractivo, 
+                        el sitio resalta la frescura y calidad de los ingredientes utilizados. Con secciones
+                        dinamicas y funcionalidades atractivas, entre ellas carruseles y un switcher 
+                        que te permite cambiar el color de varios elementos.
+                        <h4 class="text-3">Detalles del Proyecto:</h4>
+                        <ul class="text-2">
+                          <li><span class="text-dark fw-600">Tipo: </span>Fulsstack-dev</li>
+                          <li><span class="text-dark fw-600">Sector: </span>Industria Alimenticia</li>
+                          <li><span class="text-dark fw-600">Fecha: </span>May/Jun-2023</li>
+                          <li><span class="text-dark fw-600">Tecnologias: </span></li>
+                            <ul class="text-7">
+                              <i class="fa-brands fa-html5 text-primary" data-bs-toggle="tooltip" title="HTML5"></i>
+                              <i class="fa-brands fa-css3-alt text-primary" data-bs-toggle="tooltip" title="CSS"></i>
+                              <i class="fa-brands fa-square-js text-primary" data-bs-toggle="tooltip" title="Javascript"></i>
+                              <i class="fa-brands fa-bootstrap text-primary" data-bs-toggle="tooltip" title="Bootstrap"></i>
+                            </ul>
+                          <li><span class="fw-600">URL: </span><a data-bs-toggle="tooltip" title="Conoce el proyecto VeggyFoods" href="https://angel-tellez-veggy-foods.netlify.app/" target="_blank">Pagina principal<i class=""></i></a></li> 
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <ul class="nav nav-separator justify-content-center justify-content-lg-end">
-            <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#terms-policy" href="#">Terms & Policy</a></li>
-            <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#disclaimer" href="#">Disclaimer</a></li>
-          </ul>
+        <!-- Modal VeggyFoods End-->
+        <!-- 4.1.1.2 Modal Base Proyectos -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 text-uppercase text-primary" id="exampleModalLabel">Titulo del proyecto</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="owl-carousel owl-theme modal-carousel" data-loop="true" data-nav="false" data-autoplay="false" data-margin="25" data-stagepadding="0" data-slideby="1" data-items-xs="1" data-items-sm="1" data-items-md="1" data-items-lg="1">
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-2.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Titulo Imagen1</strong>
+                            <span class="text-muted fw-500">Descripción Imagen1</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-2.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Titulo Imagen2</strong>
+                            <span class="text-muted fw-500">Descripción Imagen2</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-2.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Titulo Imagen3</strong>
+                            <span class="text-muted fw-500">Descripción Imagen3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="bg-light rounded p-5">
+                          <div class="d-flex align-items-center mt-auto mb-4">
+                            <img class="img-fluid border d-inline-block w-auto" src="images/projects/project-1-2.jpg" alt="">
+                          </div>
+                          <p class="text-center">
+                            <strong class="d-block text-dark fw-600">Titulo Imagen4</strong>
+                            <span class="text-muted fw-500">Descripción Imagen4</span>
+                          </p>
+                        </div>
+                      </div>
+                        <!-- Agrega más elementos .item según tus necesidades -->
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div>
+                        <h4 class="text-4">Información del Proyecto:</h4>
+                        <P class="modal-dialog modal-dialog-centered text-justify text-2">
+                          Escribe acá el detalle de los proyectos que quieras incluir.
+                        <h4 class="text-3">Detalles del Proyecto:</h4>
+                        <ul class="text-2">
+                          <li><span class="text-dark fw-600">Tipo: </span>####</li>
+                          <li><span class="text-dark fw-600">Sector: </span>######</li>
+                          <li><span class="text-dark fw-600">Fecha: </span>#######</li>
+                          <li><span class="text-dark fw-600">Tecnologias: </span></li>
+                            <ul class="text-7">
+                              <i class="fa-brands fa-html5 text-primary" data-bs-toggle="tooltip" title="HTML5"></i>
+                              <i class="fa-brands fa-css3-alt text-primary" data-bs-toggle="tooltip" title="CSS"></i>
+                              <i class="fa-brands fa-square-js text-primary" data-bs-toggle="tooltip" title="Javascript"></i>
+                              <i class="fa-brands fa-bootstrap text-primary" data-bs-toggle="tooltip" title="Bootstrap"></i>
+                            </ul>
+                          <li><span class="fw-600">URL: </span><a data-bs-toggle="tooltip" title="Conoce el proyecto VeggyFoods" href="https://angel-tellez-veggy-foods.netlify.app/" target="_blank">Pagina principal<i class=""></i></a></li> 
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Modal Base Proyectos End-->
+      </div>
+      <!-- 4.1.1 Modales Proyectos End -->
+
+      <!-- 4.1.2 Modales Otras secciones-->
+      <div id="othermodals">  
+        <!-- 4.1.2.1 Modal Terminos & política -->
+        <div id="terms-policy" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <h5 class="modal-title text-uppercase text-primary">Términos & Política</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <p class="text-justify">En esta sección, encontrarás información importante que rige el contenido y el acceso a este sitio web. A continuación, se detallan los Términos de Uso, que establecen las condiciones de uso del sitio, así como la Política de Privacidad, que explica cómo se maneja la información personal de los visitantes.</p>
+                <h3 class="mb-3 mt-4 text-primary">Términos de Uso</h3>
+                <p class="text-justify"><strong>1. Uso del Sitio:</strong> Al acceder y utilizar este sitio web, aceptas cumplir con estos términos de uso y todas las leyes y regulaciones aplicables. Si no estás de acuerdo con estos términos, te recomendamos que no utilices el sitio.</p>
+                <p class="text-justify"><strong>2. Propiedad Intelectual:</strong> Todo el contenido presente en este sitio, incluyendo pero no limitado a textos, imágenes, gráficos, logotipos y elementos de diseño, están protegidos por derechos de autor y otras leyes de propiedad intelectual. No está permitido copiar, reproducir o distribuir el contenido sin autorización previa.</p>
+                <p class="text-justify"><strong>3. Responsabilidad del Usuario:</strong> Eres responsable de cualquier actividad que realices en el sitio. No debes utilizarlo para fines ilegales, difamatorios, ofensivos o cualquier otro que viole los derechos de terceros.</p>
+                <p class="text-justify"><strong>4. Exactitud del Contenido:</strong> Si bien nos esforzamos por proporcionar información precisa y actualizada, no garantizamos la precisión o integridad del contenido del sitio. El uso de la información proporcionada es bajo tu propio riesgo.</p>
+                <p class="text-justify"><strong>5. Enlaces a Terceros:</strong> Este sitio puede contener enlaces a sitios web de terceros. No somos responsables de la precisión, seguridad o contenido de estos sitios externos.</p>
+                <h3 class="mb-3 mt-4 text-primary">Política de Privacidad</h3>
+                <p class="text-justify"><strong>1. Recopilación de Información:</strong> Cuando visitas nuestro sitio, podemos recopilar cierta información personal, como direcciones IP, cookies y datos de navegación. Esta información se utiliza para mejorar la experiencia del usuario y comprender cómo los visitantes interactúan con el sitio.</p>
+                <p class="text-justify"><strong>2. Uso de Cookies:</strong> Utilizamos cookies y tecnologías similares para personalizar el contenido, analizar el tráfico del sitio y mejorar nuestros servicios. Puedes administrar las preferencias de cookies a través de la configuración de tu navegador.</p>
+                <p class="text-justify"><strong>3. Confidencialidad:</strong> No compartiremos ni venderemos tu información personal a terceros sin tu consentimiento, excepto cuando la ley lo requiera.</p>
+                <p class="text-justify"><strong>4. Seguridad:</strong> Implementamos medidas de seguridad para proteger tu información personal. Sin embargo, ten en cuenta que ninguna transmisión de datos por internet es completamente segura, y no podemos garantizar la seguridad absoluta de la información transmitida.</p>
+                <h3 class="mb-3 mt-4 text-primary">Otros Aspectos</h3>
+                <p class="text-justify">- <strong>Derechos de Autor y Propiedad Intelectual:</strong> Todos los derechos de autor y propiedad intelectual del contenido del sitio pertenecen a nosotros, a menos que se indique lo contrario. No está permitido utilizar, reproducir o distribuir el contenido sin autorización expresa.</p>
+                <p class="text-justify">- <strong>Renuncia de Responsabilidad:</strong> Si bien nos esforzamos por proporcionar información precisa y actualizada, no asumimos responsabilidad por cualquier daño o perjuicio derivado del uso del contenido del sitio.</p>
+                <p class="text-justify">- <strong>Comentarios y Moderación:</strong> Agradecemos tus comentarios y opiniones. Sin embargo, nos reservamos el derecho de moderar y eliminar cualquier contenido inapropiado, ofensivo o spam dejado por los usuarios.</p>
+                <p class="text-justify">- <strong>Contacto:</strong> Si tienes preguntas o inquietudes sobre estos términos y políticas, no dudes en contactarnos a través de la página de contacto del sitio.</p>
+                <p class="text-justify">Es importante que revises periódicamente esta sección, ya que podemos actualizar y modificar estos términos y políticas para reflejar cambios en el sitio o en las leyes y regulaciones aplicables. Última actualización: [16-Julio-2023].</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Terminos & política End -->
+
+        <!-- 4.1.2.2 Modal Copyright & descargos -->
+        <div id="disclaimer" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-primary text-uppercase">Copyright & Disclaimer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <p class="text-justify"><strong>Derechos de Autor:</strong><br>Copyright © Luis Angel Tellez Rojas 2023. Todos los derechos reservados.</p>
+                <p class="text-justify"><strong>Todo el contenido</strong><br>de este sitio web, incluidos textos, imágenes, diseño y código fuente, está protegido por leyes de derechos de autor y es propiedad exclusiva de Luis Angel Tellez Rojas, a menos que se indique lo contrario. Queda prohibida la reproducción, distribución o uso no autorizado de cualquier parte del contenido sin el consentimiento expreso por escrito de Luis Angel Tellez Rojas.</p>
+                <p class="text-justify"><strong>Uso de Código Abierto y Bibliotecas de Terceros:</strong><br>Este sitio web puede utilizar bibliotecas de código abierto y recursos de terceros para mejorar su funcionalidad y apariencia visual. Todos estos recursos están sujetos a sus respectivas licencias y términos de uso. Agradezco y doy crédito a los autores y desarrolladores de las bibliotecas que han sido utilizadas en este proyecto.</p>
+                <p class="text-justify"><strong>Descargos de Responsabilidad:</strong><br>Este portafolio web se presenta con el propósito de mostrar mi experiencia y habilidades como desarrollador fullstack. Los proyectos, productos o servicios mencionados aquí son representativos de mi trabajo, pero algunos detalles pueden haber cambiado desde su implementación original. No me hago responsable de la interpretación, el uso o la aplicación de la información contenida en este sitio.</p>
+                <p class="text-justify"><strong>Enlaces a Sitios Externos:</strong><br>Es posible que encuentres enlaces a otros sitios web que no son mantenidos ni controlados por Luis Angel Tellez Rojas. Estos enlaces se proporcionan con fines informativos y de referencia. No me responsabilizo por el contenido, las políticas de privacidad o las prácticas de los sitios externos. Se recomienda revisar las políticas de privacidad y términos de uso de cualquier sitio web al que se acceda desde aquí.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Copyright & descargos End --> 
       </div>
     </div>
-  </footer>
-  <!-- Footer end --> 
-  
-</div>
-<!-- Document Wrapper end --> 
+    <!-- Bootstrap Modals End --> 
 
-<!-- Back to Top
-============================================= --> 
-<a id="back-to-top" class="rounded-circle" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
-
-<!-- Terms & Policy Modal
-================================== -->
-<div id="terms-policy" class="modal fade" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Terms & Policy</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-4">
-        <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        <h3 class="mb-3 mt-4 mt-4">Terms of Use</h3>
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry.</p>
-        <h5 class="text-4 mt-4">Part I â€“ Information Simone collects and controls</h5>
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <h5 class="text-4 mt-4">Part II â€“ Information that Simone processes on your behalf</h5>
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <h5 class="text-4 mt-4">Part III â€“ General</h5>
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <h3 class="mb-3 mt-4">Privacy Policy</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <ol class="lh-lg">
-          <li>Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Quidam lisque persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>In quot quidam persequeris vim, ad mea essent possim iriure. Quidam lisque persius interesset his et.</li>
-          <li>Quidam lisque persius interesset his et, Lisque persius interesset his et.</li>
-          <li>Interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Quot quidam persequeris vim Quidam lisque persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Terms & Policy Modal End --> 
-
-<!-- Disclaimer Modal
-================================== -->
-<div id="disclaimer" class="modal fade" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Copyright & Disclaimer</h5>
-		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-4">
-        <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <ul class="lh-lg">
-          <li>Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Quidam lisque persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>In quot quidam persequeris vim, ad mea essent possim iriure. Quidam lisque persius interesset his et.</li>
-          <li>Quidam lisque persius interesset his et, Lisque persius interesset his et.</li>
-          <li>Interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
-          <li>Quot quidam persequeris vim Quidam lisque persius interesset his et, Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</li>
+    <!-----------------------------------
+    4.2 others                    // (Otros elementos presentes en el sitio web, como el back to top switches y otros.)
+    ------------------------------------->  
+    <div id="others">
+      <!-- 4.2.1 Switcher de Estilos --> 
+      <div id="styles-switcher" class="right">
+        <h2 class="text-3">Cambia el color</h2>
+        <hr>
+        <ul>
+          <li class="indigo" data-bs-toggle="tooltip" title="Indigo" data-path="css/color-indigo.css"></li>
+          <li class="blue" data-bs-toggle="tooltip" title="Blue" data-path="css/color-blue.css"></li>
+          <li class="purple" data-bs-toggle="tooltip" title="Purple" data-path="css/color-purple.css"></li>
+          <li class="cyan" data-bs-toggle="tooltip" title="Cyan" data-path="css/color-cyan.css"></li>
+          <li class="red" data-bs-toggle="tooltip" title="Red" data-path="css/color-red.css"></li>
+          <li class="pink" data-bs-toggle="tooltip" title="Pink" data-path="css/color-pink.css"></li>
+          <li class="green" data-bs-toggle="tooltip" title="Green" data-path="css/color-green.css"></li>
+          <li class="yellow" data-bs-toggle="tooltip" title="Yellow" data-path="css/color-yellow.css"></li>
+          <li class="orange" data-bs-toggle="tooltip" title="Orange" data-path="css/color-orange.css"></li>
+          <li class="brown" data-bs-toggle="tooltip" title="Brown" data-path="css/color-brown.css"></li>
         </ul>
+        <button class="btn btn-dark btn-sm w-100 border-0 fw-400 rounded-0 shadow-none" id="reset-color">Color Inicial</button>
+        <button class="btn switcher-toggle"><i class="fas fa-cog"></i></button>
       </div>
+      <!-- Switcher de Estilos End --> 
+
+      <!-- 4.2.2 Boton Back to Top -->  
+      <a id="back-to-top" class="rounded-circle" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+      <!-- Boton Back to Top button End --> 
     </div>
   </div>
-</div>
-<!-- Disclaimer Modal End --> 
+  <!-- =Extras & accessories End= -->
 
-<!-- Styles Switcher -->
-<div id="styles-switcher" class="right">
-  <h2 class="text-3">Color Switcher</h2>
-  <hr>
-  <ul>
-    <li class="indigo" data-bs-toggle="tooltip" title="Indigo" data-path="css/color-indigo.css"></li>
-    <li class="blue" data-bs-toggle="tooltip" title="Blue" data-path="css/color-blue.css"></li>
-    <li class="purple" data-bs-toggle="tooltip" title="Purple" data-path="css/color-purple.css"></li>
-    <li class="cyan" data-bs-toggle="tooltip" title="Cyan" data-path="css/color-cyan.css"></li>
-    <li class="red" data-bs-toggle="tooltip" title="Red" data-path="css/color-red.css"></li>
-    <li class="pink" data-bs-toggle="tooltip" title="Pink" data-path="css/color-pink.css"></li>
-    <li class="green" data-bs-toggle="tooltip" title="Green" data-path="css/color-green.css"></li>
-    <li class="yellow" data-bs-toggle="tooltip" title="Yellow" data-path="css/color-yellow.css"></li>
-    <li class="orange" data-bs-toggle="tooltip" title="Orange" data-path="css/color-orange.css"></li>
-    <li class="brown" data-bs-toggle="tooltip" title="Brown" data-path="css/color-brown.css"></li>
-  </ul>
-  <button class="btn btn-dark btn-sm w-100 border-0 fw-400 rounded-0 shadow-none" id="reset-color">Reset Default Teal</button>
-  <button class="btn switcher-toggle"><i class="fas fa-cog"></i></button>
-</div>
-<!-- Styles Switcher End --> 
-
-<!-- JavaScript --> 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap --> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<!-- Easing --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> 
-<!-- Appear --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js"></script> 
-<!-- Images Loaded --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script> 
-<!-- Counter --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script> 
-<!-- Owl Carousel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!-- isotope Portfolio Filter --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> 
-<!-- Magnific Popup --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> 
-<!-- Typed --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-<!-- Style Switcher --> 
-<script src="js/color-switcher.js"></script> 
-<!-- Custom Script --> 
-<script src="js/script.js"></script>
-
+    <!-- ========================== 
+  5. Scripts                       // (Seccion de referencias de donde se importan las librerias y plugs utilizados)
+  =============================== -->
+  <div id="scrips">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Easing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Appear -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js"></script>
+    <!-- Images Loaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <!-- Counter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- isotope Portfolio Filter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- Typed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- Style Switcher -->
+    <script src="js/color-switcher.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+    <!-- Font Awesome Icon -->
+    <script src="https://kit.fontawesome.com/c6209a6d8d.js" crossorigin="anonymous"></script>
+  </div>
 </body>
 </html>

@@ -1,11 +1,12 @@
-/*===========================================================
-
-   Template Name: Simone - Personal Portfolio Template
-   Author: Harnish Design
-   Template URL: http://demo.harnishdesign.net/html/simone
-   Author URL: https://themeforest.net/user/harnishdesign
-   File Description : Main css file of the template
-	
+/* Made By
+================================================================
+Pendiente por depurar
+* Template:  	 Portafolio-Angel Tellez
+* Written by: 	 Luis Angel Tellez Rojas
+* Description:   Main Custom Script File
+================================================================
+*/
+/*
 =================================================
   Table of Contents
 =================================================
@@ -23,7 +24,7 @@
 		5.3 Accordion & Toggle
 		5.4 Nav
 		5.5 Tabs
-		5.6 Hero Background
+		5.6 angel Background
 		5.7 Owl Carousel
 		5.8 Brands Grid
 		5.9 Portfolio
@@ -51,6 +52,70 @@ body {
   background: #dddddd;
   color: #4c4d4d;
   font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background: #20c997;
+  color: #fff;
+  text-shadow: none;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+img {
+  vertical-align: inherit;
+}
+
+a, a:focus {
+  color: #20c997;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a:hover, a:active {
+  color: #1baa80;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a:focus, a:active,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus,
+button:focus,
+button:active {
+  outline: none;
+}
+
+p {
+  line-height: 1.8;
+}
+
+blockquote {
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  border-color: #eee;
+  padding: 10px 20px;
+}
+
+html[dir="rtl"] blockquote {
+  border-width: 0 5px 0 0px;
+}
+
+iframe {
+  border: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #252b33;
 }
 
 /*-------- Preloader --------*/
@@ -142,79 +207,6 @@ body {
   }
 }
 
-/*--- Preloader Magnific Popup ----*/
-.mfp-container .preloader {
-  background: transparent;
-}
-
-.mfp-container .preloader .lds-ellipsis div {
-  background: #fff;
-}
-
-::selection {
-  background: #20c997;
-  color: #fff;
-  text-shadow: none;
-}
-
-form {
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-
-img {
-  vertical-align: inherit;
-}
-
-a, a:focus {
-  color: #20c997;
-  text-decoration: none;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-a:hover, a:active {
-  color: #1baa80;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-a:focus, a:active,
-.btn.active.focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn:active:focus,
-.btn:focus,
-button:focus,
-button:active {
-  outline: none;
-}
-
-p {
-  line-height: 1.8;
-}
-
-blockquote {
-  border-width: 0 0 0 5px;
-  border-style: solid;
-  border-color: #eee;
-  padding: 10px 20px;
-}
-
-html[dir="rtl"] blockquote {
-  border-width: 0 5px 0 0px;
-}
-
-iframe {
-  border: 0 !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #252b33;
-}
-
 /* =================================== */
 /*  2. Helpers Classes
 /* =================================== */
@@ -224,32 +216,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Border Radius */
-.rounded-lg {
-  border-radius: 0.6rem !important;
+/* Text prop */
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.rounded-top-0 {
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-}
-
-.rounded-bottom-0 {
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-
-.rounded-start-0 {
-  border-top-left-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
-}
-
-.rounded-end-0 {
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-
-/* Text Size */
 .text-0 {
   font-size: 11px !important;
   font-size: 0.6875rem !important;
@@ -577,19 +550,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-dark-4 {
   background-color: #6c757d !important;
-}
-
-/* Progress Bar */
-.progress-sm {
-  height: 0.5rem !important;
-}
-
-.progress-lg {
-  height: 1.5rem !important;
-}
-
-hr {
-  opacity: 0.1;
 }
 
 /* =================================== */
@@ -1955,8 +1915,8 @@ html[dir="rtl"] .side-header.side-header-right .primary-menu {
   box-shadow: 0px 0px 0px 8px rgba(250, 250, 250, 0.2);
 }
 
-/* Testimonial */
-.testimonial {
+/* references */
+.references {
   background: #fff;
   border: 1px solid #f1f5f6;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
@@ -2369,13 +2329,13 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   }
 }
 
-/*=== 5.6 Hero Background ===*/
-.hero-wrap {
+/*=== 5.6 angel Background ===*/
+.angel-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.hero-wrap .hero-mask, .hero-wrap .hero-bg, .hero-wrap .hero-bg-slideshow {
+.angel-wrap .angel-mask, .angel-wrap .angel-bg, .angel-wrap .angel-bg-slideshow {
   position: absolute;
   top: 0;
   left: 0;
@@ -2383,27 +2343,27 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   width: 100%;
 }
 
-.hero-wrap .hero-mask {
+.angel-wrap .angel-mask {
   z-index: 1;
 }
 
-.hero-wrap .hero-content {
+.angel-wrap .angel-content {
   position: relative;
   z-index: 2;
 }
 
-.hero-wrap .hero-particles {
+.angel-wrap .angel-particles {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 3;
 }
 
-.hero-wrap .hero-bg-slideshow {
+.angel-wrap .angel-bg-slideshow {
   z-index: 0;
 }
 
-.hero-wrap .hero-bg {
+.angel-wrap .angel-bg {
   z-index: 0;
   background-attachment: fixed;
   background-position: center center;
@@ -2414,20 +2374,21 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   transition: background-image 300ms ease-in 200ms;
 }
 
-.hero-wrap .hero-bg.hero-bg-scroll {
+.angel-wrap .angel-bg.angel-bg-scroll {
   background-attachment: scroll;
 }
 
-.hero-wrap .hero-bg-slideshow .hero-bg {
+.angel-wrap .angel-bg-slideshow .angel-bg {
   background-attachment: inherit;
 }
 
-.hero-wrap .hero-bg-slideshow.owl-carousel .owl-stage-outer, .hero-wrap .hero-bg-slideshow.owl-carousel .owl-stage, .hero-wrap .hero-bg-slideshow.owl-carousel .owl-item {
+.angel-wrap .angel-bg-slideshow.owl-carousel .owl-stage-outer, .angel-wrap .angel-bg-slideshow.owl-carousel .owl-stage, .angel-wrap .angel-bg-slideshow.owl-carousel .owl-item {
   height: 100%;
 }
 
 /*=== 5.7 Owl Carousel ===*/
-.owl-theme.single-slideshow .owl-nav button.owl-prev, .owl-theme.single-slideshow .owl-nav button.owl-next {
+.owl-theme.single-slideshow .owl-nav button.owl-prev,
+.owl-theme.single-slideshow .owl-nav button.owl-next {
   font-size: 17px;
   width: 45px;
   height: 45px;
@@ -2435,6 +2396,7 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
 }
 
 .owl-theme.single-slideshow .owl-nav button.owl-prev {
+  top: -30px; /* Ajusta el valor según tu preferencia */
   left: 10px;
 }
 
@@ -2446,35 +2408,38 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   padding: 0;
 }
 
-.owl-theme .hero-wrap .hero-bg {
+.owl-theme .angel-wrap .angel-bg {
   background-attachment: inherit;
 }
 
 .owl-theme.single-slideshow .owl-dots {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+  top: auto;
+  bottom: 10px; /* Ajusta el valor según tu preferencia */
 }
 
-.owl-theme.single-slideshow .owl-dots .owl-dot.active span, .owl-theme.single-slideshow .owl-dots .owl-dot:hover span {
+.owl-theme.single-slideshow .owl-dots .owl-dot.active span,
+.owl-theme.single-slideshow .owl-dots .owl-dot:hover span {
   border-color: #20c997;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
 }
 
-.owl-theme.single-slideshow .owl-dots .owl-dot.active span:after, .owl-theme.single-slideshow .owl-dots .owl-dot:hover span:after {
+.owl-theme.single-slideshow .owl-dots .owl-dot.active span:after,
+.owl-theme.single-slideshow .owl-dots .owl-dot:hover span:after {
   background-color: #20c997;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
   border-color: #20c997;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
 }
 
-.owl-theme .owl-dots .owl-dot.active span:after, .owl-theme .owl-dots .owl-dot:hover span:after {
+.owl-theme .owl-dots .owl-dot.active span:after,
+.owl-theme .owl-dots .owl-dot:hover span:after {
   background-color: #20c997;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
@@ -2484,13 +2449,15 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   background-color: rgba(250, 250, 250, 0.5);
 }
 
-.owl-theme.owl-light .owl-dots .owl-dot.active span:after, .owl-theme.owl-light .owl-dots .owl-dot:hover span:after {
+.owl-theme.owl-light .owl-dots .owl-dot.active span:after,
+.owl-theme.owl-light .owl-dots .owl-dot:hover span:after {
   background-color: #20c997;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
 }
 
-.owl-theme.owl-light .owl-nav button.owl-prev, .owl-theme.owl-light .owl-nav button.owl-next {
+.owl-theme.owl-light .owl-nav button.owl-prev,
+.owl-theme.owl-light .owl-nav button.owl-next {
   background-color: rgba(250, 250, 250, 0.3);
   color: #fff;
 }
@@ -2500,6 +2467,7 @@ html[dir="rtl"] .nav.nav-separator .nav-item + .nav-item .nav-link:after {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
 
 /*=== 5.8 Brands Grid ===*/
 .brands-grid {
@@ -2856,6 +2824,11 @@ html[dir="rtl"] #footer .nav .nav-item:last-child .nav-link {
 
 .social-icons li:hover.social-icons-twitter a, .social-icons.social-icons-colored li.social-icons-twitter a {
   color: #00ACEE;
+}
+
+
+.social-icons li:hover.social-icons-whatsapp a, .social-icons.social-icons-colored li.social-icons-whatsapp a {
+  color: #25D366;
 }
 
 .social-icons li:hover.social-icons-facebook a, .social-icons.social-icons-colored li.social-icons-facebook a {
@@ -3277,6 +3250,11 @@ select.form-control:not([size]):not([multiple]):not(.form-control-sm) {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+.btn-modal {
+  padding: 3px;
+}
+
 
 .input-group-append .btn, .input-group-prepend .btn {
   -webkit-box-shadow: none;
